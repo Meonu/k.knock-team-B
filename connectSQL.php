@@ -2,7 +2,7 @@
 
     $servername = "localhost:6365";
 
-    $user = "meonu";
+    $user = "kimyeonwoo";
 
     $password = "kyw@514514514";
 
