@@ -1,14 +1,15 @@
 <?php
 
-    $servername = "52.231.107.199:6365";
+    $servername = "localhost";
 
     $user = "kimyeonwoo";
 
     $password = "kyw@514514514";
 
+    $DBname = "mem_info";
  
 
-    $connect = mysqli_connect($servername, $user, $password);
+    $connect = mysqli_connect($servername, $user, $password, $DBname);
 
     if (!$connect) {
 
