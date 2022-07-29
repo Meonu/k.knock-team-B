@@ -1,10 +1,10 @@
 <?php
 
-    $servername = "localhost";
+    $servername = "localhost:6365";
 
-    $user = "choi";
+    $user = "meonu";
 
-    $password = "0219";
+    $password = "kyw@514514514";
 
  
 
