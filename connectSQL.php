@@ -1,6 +1,6 @@
 <?php
 
-    $servername = "localhost:6365";
+    $servername = "52.231.107.199:6365";
 
     $user = "kimyeonwoo";
 
