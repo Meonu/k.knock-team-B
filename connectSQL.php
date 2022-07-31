@@ -3,9 +3,7 @@
     
     $servername = "localhost";
 
-    $user = "kimyeonwoo";
-
-    
+    $user = "yeonugim";
 
     $DBname = "MEMBER_INFO";
  
