@@ -1,6 +1,6 @@
 <?php
 
-    include_once("connectSQL.php");
+    require_once("./connectSQL.php");
 
     $userid = $_POST["title"];
 
