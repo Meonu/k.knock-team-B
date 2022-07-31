@@ -1,7 +1,30 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors",1);
+    $password = "kyw@514514514";
+    
+    $servername = "localhost";
 
-    include_once("./connectSQL.php");
+    $user = "yeonugim";
 
+    $DBname = "MEMBER_INFO";
  
 
-?>
+    $connect = new mysqli($servername, $user, $password, $DBname);
+
+    if (!$connect)
+     echo "<h2>서버와의 연결 실패</h2>";
+     
+
+$userid = $_POST["title"];
+
+$userpw = $_POST["userpw"];
+
+$name = $_POST["username"];
+
+$userphone = $_POST["userphone"];
+
+$email = $_POST["useremail"];
+
+echo "<h3>추가될 회원 정보는 {$username},{$userpw},{$name},{$userphone},{$email}</h3>";
+?>  
