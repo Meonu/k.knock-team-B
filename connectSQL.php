@@ -1,6 +1,7 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors",1);
+    error_reporting(E_ALL); 
+    ini_set("display_errors",1);
+
     $password = "kyw@514514514";
     
     $servername = "localhost";
@@ -14,5 +15,6 @@ ini_set("display_errors",1);
 
     if (!$connect)
      echo "<h2>서버와의 연결 실패</h2>";
-
+    else
+     echo "<h2>연결 성공!</h2>";
 ?>
