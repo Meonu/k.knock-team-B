@@ -8,7 +8,7 @@
     $DBname = "MEMBER_INFO";
  
 
-    $connect = new mysqli($server, $user, $password, $DBname);
+    $connect = new mysqli($servername, $user, $password, $DBname);
 
     if ($connect -> connect_error) {
 
