@@ -19,6 +19,7 @@ ini_set("display_errors",1);
 $userid = $_POST["userid"];
 
 $userpw = $_POST["userpw"];
+$confirm = $_POST["pwconfirm"];
 
 $name = $_POST["username"];
 
@@ -26,6 +27,7 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
-echo "<h2>추가될 회원 정보는 $userid,$userpw,$name,$userphone,$email 입니다.</h2>";
+$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES($userid,$userpw,$name,$userphine,$email)";
 
+echo $sql;
 ?>  
