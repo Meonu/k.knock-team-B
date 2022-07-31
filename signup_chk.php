@@ -31,9 +31,7 @@ $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES(
 
 if(strcmp($userpw,$confirm)==0)
 {
-$result = mysqli_query($connect,$sql);
-
-    if($result === false)
+    if(mysqli_query($connect,$sql) === false)
     {
         echo "오류가 발생했습니다.";
     }
@@ -41,8 +39,7 @@ $result = mysqli_query($connect,$sql);
     {   
     ?>
         <script>
-        alert("회원가입이 완료되었습니다.");
-        
+        alert("회원가입이 완료되었습니다.")
         </script>   
     <?php
     }
@@ -51,7 +48,7 @@ else
 {
     ?>
     <script>
-    alert("비밀번호가 일치하지 않습니다.");
+    alert("비밀번호가 일치하지 않습니다.")
     </script>
 
     <?php
