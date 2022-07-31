@@ -14,8 +14,8 @@ ini_set("display_errors",1);
 
     if ($connect) {
 
-       echo "<h2>서버와의 연결 실패!</h2>";
+       echo "<h2>서버와의 연결 성공</h2>";
     }
-    else echo "<h2>서버와의 연결 성공!</h2>";
+    else echo "<h2>서버와의 연결 실패</h2>";
 
 ?>
