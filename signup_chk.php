@@ -16,7 +16,7 @@ ini_set("display_errors",1);
      echo "<h2>서버와의 연결 실패</h2>";
 
 
-$userid = $_POST["title"];
+$userid = $_POST["userid"];
 
 $userpw = $_POST["userpw"];
 
@@ -26,6 +26,6 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
-echo "<h2>추가될 회원 정보는 $username,$userpw,$name,$userphone,$email 입니다.</h2>";
+echo "<h2>추가될 회원 정보는 $userid,$userpw,$name,$userphone,$email 입니다.</h2>";
 
 ?>  
