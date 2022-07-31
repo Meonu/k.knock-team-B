@@ -27,7 +27,34 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
-$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES($userid,$userpw,$name,$userphine,$email)";
+$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES($userid,$userpw,$name,$userphone,$email)";
 
-echo $sql;
+if(strcmp($userpw,$confirm))
+{
+$result = mysqli_query($connect,$sql);
+
+    if($result === false)
+    {
+        echo "오류가 발생했습니다.";
+    }
+    else
+    {   
+    ?>
+        <script>
+        alert("회원가입이 완료되었습니다.");
+        location.herf = 'localhost:6365';
+        </script>   
+    <?php
+    }
+}
+else
+{
+    ?>
+    <script>
+    alert("비밀번호가 일치하지 않습니다.");
+    </script>
+
+    <?php
+}
+
 ?>  
