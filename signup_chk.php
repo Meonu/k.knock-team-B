@@ -29,7 +29,7 @@ $email = $_POST["useremail"];
 
 $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES($userid,$userpw,$name,$userphone,$email)";
 
-if(strcmp($userpw,$confirm))
+if(strcmp($userpw,$confirm)==0)
 {
 $result = mysqli_query($connect,$sql);
 
