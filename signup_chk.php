@@ -42,7 +42,7 @@ $result = mysqli_query($connect,$sql);
     ?>
         <script>
         alert("회원가입이 완료되었습니다.");
-        location.herf = 'localhost:6365';
+        <a herf = "localhost:6365">홈페이지로 이동</a>
         </script>   
     <?php
     }
