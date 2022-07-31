@@ -27,7 +27,7 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
-$sql = "INSERT INTO mem_info(userid, userpw, username, userphone, useremail) VALUES ('$_POST[userid]', '$_POST[userpw]', '$_POST[username]', '$_POST[userphone]', '$_POST[useremail]')";
+$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES({$userid},{$userpw},{$name},{$userphone},{$email})";
 
 if(strcmp($userpw,$confirm)==0)
 {
