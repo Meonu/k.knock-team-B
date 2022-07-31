@@ -8,13 +8,12 @@
     $DBname = "MEMBER_INFO";
  
 
-    $connect = mysqli_connect($servername, $user, $password, $DBname);
+    $connect = new mysqli($server, $user, $password, $DBname);
 
-    if (!$connect) {
+    if ($connect -> connect_error) {
 
-       die("서버와의 연결 실패! : ".mysqli_connect_error());
+       echo "<h2>서버와의 연결 실패!</h2>";
     }
-
-    echo "서버와의 연결 성공!";
+    else echo "<h2>서버와의 연결 성공!</h2>";
 
 ?>
