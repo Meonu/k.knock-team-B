@@ -12,7 +12,7 @@ ini_set("display_errors",1);
 
     $connect = new mysqli($servername, $user, $password, $DBname);
 
-    if ($connect -> connect_error) {
+    if ($connect) {
 
        echo "<h2>서버와의 연결 실패!</h2>";
     }
