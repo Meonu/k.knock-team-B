@@ -40,7 +40,6 @@ if(strcmp($userpw,$confirm)==0)
     ?>
         <script>
         alert("회원가입이 완료되었습니다.");
-        <p class="wow"><a href="localhost:6365">return to homepage</a></p>
         </script>   
     <?php
     }
