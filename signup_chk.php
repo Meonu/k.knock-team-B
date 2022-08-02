@@ -1,4 +1,6 @@
 <?php
+
+
 error_reporting(E_ALL);
 ini_set("display_errors",1);
     $password = "kyw@514514514";
@@ -27,15 +29,36 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
+function loginchk(){
+    if($_POST["userid"] == '')
+    {
+        ?>
+        <script>
+            alert("아이디를 입력하세요.");
+        </script>
+        <?php
+        return 0;
 
+    }
+    else if($_POST["userpw"] == '')
+    {
+        ?>
+        <script>
+            alert("비밀번호를 입력하세요.");
+        </script>
+        <?php
+    }
+    
+}
 
 $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES('$userid','$userpw','$name','$userphone','$email')";
 
-if(strcmp($userpw,$confirm)==0)
+if(strcmp($userpw,$confirm)==0 && loginchk() != 0)
 {
     if(mysqli_query($connect,$sql) === false)
     {
         echo "오류가 발생했습니다.";
+        return false;
     }
     else
     {   
