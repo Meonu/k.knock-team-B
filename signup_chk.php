@@ -47,8 +47,35 @@ function loginchk(){
             alert("비밀번호를 입력하세요.");
         </script>
         <?php
+        return 0;
     }
-    
+    else if($_POST["username"] == '')
+    {
+        ?>
+        <script>
+            alert("이름을 입력하세요.");
+        </script>
+        <?php
+        return 0;
+    }
+    else if($_POST["userphone"] == '')
+    {
+        ?>
+        <script>
+            alert("전화번호를 입력하세요.");
+        </script>
+        <?php
+        return 0;
+    }
+    else if(strcmp($_POST["userpw"],$_POST["pwconfirm"];)==0)
+    {
+        ?>
+        <script>
+            alert("비밀번호가 일치하지 않습니다.");
+        </script>
+        <?php
+        return 0;
+    }
 }
 
 $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES('$userid','$userpw','$name','$userphone','$email')";
