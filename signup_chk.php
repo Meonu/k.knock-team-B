@@ -67,7 +67,7 @@ function loginchk(){
         <?php
         return 0;
     }
-    else if(strcmp($_POST["userpw"],$_POST["pwconfirm"];)==0)
+    else if(strcmp($_POST["userpw"],$_POST["pwconfirm"])==0)
     {
         ?>
         <script>
