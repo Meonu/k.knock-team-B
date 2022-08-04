@@ -20,12 +20,44 @@
             return 0;
         }
     }
+    function rightsign()
+    {
+        var userid = document.getElementById("userid").value;
+        var userpw = document.getElementById("userpw").value;
+        var pwconfirm = document.getElementById("pwconfirm").value;
+
+        var username = document.getElementById("username").value;
+
+        var userphone = document.getElementById("userphone").value;
+
+        if(userid == '')
+        {
+            alert("아이디를 입력해주세요.");
+            return false;
+        }
+        else if(userpw == '')
+        {
+            alert("비밀번호를 입력해주세요.");
+            return false;
+        }
+        else if((userpw === pwconfirm) == false)
+        {
+            alert("비밀번호가 일치하지 않습니다.");
+            return false;
+        }
+        else if(username == '')
+        {
+            alert("이름을 입력해주세요.");
+            return false;
+        }
+        else return true;
+    }
 </script>
 
 </head>
 <body>
  
-  <form action="signup_chk.php" name = "regiform" method="post">
+  <form action="signup_chk.php" name = "regiform" method="post" onsubmit="return rightsign()">
     <fieldset style = 'width :300px;'>
         <legend><h1>Sign Up</h1></legend>
         <pre>
