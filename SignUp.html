@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <script src="regist.js"></script>
+    
 </head>
 <body>
-    <form action="signup_chk.php" name = "regiform" method="post" onsubmit="return sendit()">
+    <form action="signup_chk.php" name = "regiform" method="post" onsubmit="return check()">
     <fieldset style = 'width :300px;'>
         <legend><h1>Sign Up</h1></legend>
         <pre>
@@ -23,4 +23,22 @@
     </fieldset>
     </form>
 </body>
+<script>
+    function check()
+    {
+        var idvalue = $('#userid').var();
+        var pwvalue = $('#userpw').var();
+
+        if(idvalue == '')
+        {
+            alert("id를 입력하세요.");
+            return false;
+        }
+        else if(pwvalue == '')
+        {
+            alert("비밀번호를 입력하세요.");
+            return false;
+        }
+    }
+</script>
 </html>

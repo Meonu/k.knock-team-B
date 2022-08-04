@@ -76,11 +76,12 @@ function loginchk(){
         <?php
         return 0;
     }
+    else return 1;
 }
 
 $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES('$userid','$userpw','$name','$userphone','$email')";
 
-if(strcmp($userpw,$confirm)==0 && loginchk() != 0)
+if(loginchk() != 0)
 {
     if(mysqli_query($connect,$sql) === false)
     {
@@ -95,15 +96,6 @@ if(strcmp($userpw,$confirm)==0 && loginchk() != 0)
         </script>   
     <?php
     }
-}
-else
-{
-    ?>
-    <script>
-    alert("비밀번호가 일치하지 않습니다.")
-    </script>
-
-    <?php
 }
 
 ?>  
