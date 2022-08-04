@@ -6,13 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     
+    <script>
+        function checkid()
+        {
+            var userid = document.getElementById("userid").value;
+            if(userid)
+            {
+                url = "idcheck.php?userid="+userid;
+                window.open(url,"chkid","width = 400, height=200");
+            }
+            else
+            {
+                alert("아이디를 입력하세요.")
+            }
+        }
+    </script>
 </head>
 <body>
-    <form action="signup_chk.php" name = "regiform" method="post" onsubmit="return check()">
+    <form action="signup_chk.php" name = "regiform" method="post">
     <fieldset style = 'width :300px;'>
         <legend><h1>Sign Up</h1></legend>
         <pre>
-        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID"></p>
+        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID">
+       <br><span id = "checkid" style ="color: red;">ID중복 여부를 확인해주세요.</span>
+        <input type="button" id = "checkid" value="ID 중복 검사." oneclick="checkid();"></p> 
         <p>비밀번호:<input type = "password" name = 'userpw' id = 'userpw' placeholder="PASSWORD">
        <br>확인:    <input type = "password" name = 'pwconfirm' id = 'pwconfirm' placeholder="confirm"></p>
         <p>이름:    <input type = "text" name = 'username' id = 'username' placeholder="NAME"></p>
@@ -23,22 +40,4 @@
     </fieldset>
     </form>
 </body>
-<script>
-    function check()
-    {
-        var idvalue = $('#userid').val();
-        var pwvalue = $('#userpw').val();
-
-        if(idvalue == '')
-        {
-            alert("id를 입력하세요.");
-            return false;
-        }
-        else if(pwvalue == '')
-        {
-            alert("비밀번호를 입력하세요.");
-            return false;
-        }
-    }
-</script>
 </html>
