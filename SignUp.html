@@ -22,7 +22,7 @@
     }
     function rightsign()
     {
-        var userid = document.getElementById("userid").value;
+        var userid = document.getElementById("decide_id").value;
         var userpw = document.getElementById("userpw").value;
         var pwconfirm = document.getElementById("pwconfirm").value;
 
@@ -58,16 +58,16 @@
         document.getElementById("decide_id").value = document.getElementById("userid").value
         document.getElementById("userid").disabled = true
         document.getElementById("SignUp").disabled = false
-        document.getElementById("checkid").value = "다른 ID 로변경"
-        document.getElementById("checkid").setAttribute("onclick","change()")
+        document.getElementById("checkbutton").value = "다른 ID로변경"
+        document.getElementById("checkbutton").setAttribute("onclick","change()")
     }
     function change(){
 	document.getElementById("decide").innerHTML = "<span style='color:red;'>ID 중복 여부를 확인해주세요.</span>"
 	document.getElementById("decide_id").disabled = false
 	document.getElementById("userid").value = ""
 	document.getElementById("SignUp").disabled = true
-	document.getElementById("checkid").value = "ID 중복 검사"
-	document.getElementById("checkid").setAttribute("onclick", "check()")
+	document.getElementById("checkbutton").value = "ID 중복 검사"
+	document.getElementById("checkbutton").setAttribute("onclick", "check()")
     }
 </script>
 
@@ -81,7 +81,7 @@
         <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID" required>
             <input type ="hidden" id="decide_id" name = "decide_id"> <!--실질적으로 아이디를 보냄-->
        <br><span id = "decide" style ="color: red;">ID 중복 여부를 확인해주세요.</span>
-        <input type="button" id = "checkid" value="ID 중복 검사." onclick="check()"></p> 
+        <input type="button" id = "checkbutton" value="ID 중복 검사." onclick="check()"></p> 
         <p>비밀번호:<input type = "password" name = 'userpw' id = 'userpw' placeholder="PASSWORD">
        <br>확인:    <input type = "password" name = 'pwconfirm' id = 'pwconfirm' placeholder="confirm"></p>
         <p>이름:    <input type = "text" name = 'username' id = 'username' placeholder="NAME"></p>

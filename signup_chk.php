@@ -30,7 +30,7 @@ $userphone = $_POST["userphone"];
 $email = $_POST["useremail"];
 
 function loginchk(){
-    if($_POST["userid"] == '')
+    if($_POST["decide_id"] == '')
     {
         ?>
         <script>
