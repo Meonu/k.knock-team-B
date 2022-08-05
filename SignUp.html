@@ -52,6 +52,23 @@
         }
         else return true;
     }
+    function decide()
+    {
+        document.getElementById("decide").innerHTML = "<span style='color:blue;'>사용 가능한 ID 입니다.</span>"
+        document.getElementById("decide_id").value = document.getElementById("userid").value
+        document.getElementById("userid").disabled = true
+        document.getElementById("SignUp").disabled = false
+        document.getElementById("checkid").value = "다른 ID 로변경"
+        document.getElementById("checkid").setAttribute("onclick","change()")
+    }
+    function change(){
+	document.getElementById("decide").innerHTML = "<span style='color:red;'>ID 중복 여부를 확인해주세요.</span>"
+	document.getElementById("decide_id").disabled = false
+	document.getElementById("userid").value = ""
+	document.getElementById("SignUp").disabled = true
+	document.getElementById("checkid").value = "ID 중복 검사"
+	document.getElementById("checkid").setAttribute("onclick", "checkid()")
+    }
 </script>
 
 </head>
@@ -61,15 +78,16 @@
     <fieldset style = 'width :300px;'>
         <legend><h1>Sign Up</h1></legend>
         <pre>
-        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID">
-       <br><span id = "checkid" style ="color: red;">ID중복 여부를 확인해주세요.</span>
+        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID" required>
+            <input type ="hidden" id="decide_id" name = "decide_id"> <!--실질적으로 아이디를 보냄-->
+       <br><span id = "decide" style ="color: red;">ID중복 여부를 확인해주세요.</span>
         <input type="button" id = "checkid" value="ID 중복 검사." onclick="check()"></p> 
         <p>비밀번호:<input type = "password" name = 'userpw' id = 'userpw' placeholder="PASSWORD">
        <br>확인:    <input type = "password" name = 'pwconfirm' id = 'pwconfirm' placeholder="confirm"></p>
         <p>이름:    <input type = "text" name = 'username' id = 'username' placeholder="NAME"></p>
         <p>전화번호:<input type = "tel" name = 'userphone' id = 'userphone' placeholder="PHONE"></p>
         <p>이메일:  <input type = "text" name = 'useremail' id = 'useremail' placeholder="E-MAIL"></p>   
-        <p><input type = "submit" value = 'SignUp' name = 'SignUp_btn' id = 'SignUp_btn'></p>     
+        <p><input type = "submit" value = 'SignUp' name = 'SignUp_btn' id = 'SignUp_btn' disabled = 'true'></p>     
         </pre>
     </fieldset>
     </form>
