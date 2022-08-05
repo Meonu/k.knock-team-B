@@ -41,7 +41,7 @@ function check()
         {
             alert("비밀번호는 9자 이상의 문자열이어야 합니다.");
         }
-        else if((userpw === pwconfirm) == false)
+        else if((userpw == pwconfirm) == false)
         {
             alert("비밀번호가 일치하지 않습니다.");
             return false;
