@@ -64,8 +64,9 @@ function check()
     }
     function change(){
 	    document.getElementById("decide").innerHTML = "<span style='color:red;'>ID 중복 여부를 확인해주세요.</span>"
-	    document.getElementById("decide_id").disabled = false
+	    document.getElementById("userid").disabled = false
 	    document.getElementById("userid").value = ""
+        document.getElementById("decide_id") = null
 	    document.getElementById("SignUp_btn").disabled = true
 	    document.getElementById("checkbutton").value = "ID 중복 검사"
 	    document.getElementById("checkbutton").setAttribute("onclick", "check()")
