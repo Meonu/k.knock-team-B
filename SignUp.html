@@ -5,61 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
-    <script>
-    function check()
-    {
-        var userid = document.getElementById("userid").value;
-        if(userid)
-        {
-            url = "idcheck.php?userid="+userid;
-    window.open(url,"chkid","width = 400, height=200");
-        }
-        else
-        {
-            alert("아이디를 입력하세요.");
-            return 0;
-        }
-    }
-    function rightsign()
-    {
-        var userid = document.getElementById("userid").value;
-        var userpw = document.getElementById("userpw").value;
-        var pwconfirm = document.getElementById("pwconfirm").value;
-
-        var username = document.getElementById("username").value;
-
-        var userphone = document.getElementById("userphone").value;
-
-        if(userid == '')
-        {
-            alert("아이디를 입력해주세요.");
-            return false;
-        }
-        else if(userpw == '')
-        {
-            alert("비밀번호를 입력해주세요.");
-            return false;
-        }
-        else if((userpw === pwconfirm) == false)
-        {
-            alert("비밀번호가 일치하지 않습니다.");
-            return false;
-        }
-        else if(username == '')
-        {
-            alert("이름을 입력해주세요.");
-            return false;
-        }
-        else if(userphone == '')
-        {
-            alert("전화번호를 입력해주세요.");
-            return false;
-        }
-        else return true;
-
-        return true;
-    }
-</script>
+    <script src="signupfunc.js"></script>
 
 </head>
 <body>
@@ -68,15 +14,16 @@
     <fieldset style = 'width :300px;'>
         <legend><h1>Sign Up</h1></legend>
         <pre>
-        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID">
-       <br><span id = "checkid" style ="color: red;">ID중복 여부를 확인해주세요.</span>
-        <input type="button" id = "checkid" value="ID 중복 검사." onclick="check()"></p> 
+        <p>아이디:  <input type = "text" name = 'userid' id = 'userid' placeholder="ID" required>
+            <input type ="hidden" id="decide_id" name = "decide_id"> <!--실질적으로 아이디를 보냄-->
+       <br><span id = "decide" style ="color: red;">ID 중복 여부를 확인해주세요.</span>
+        <input type="button" id = "checkbutton" value="ID 중복 검사." onclick="check()"></p> 
         <p>비밀번호:<input type = "password" name = 'userpw' id = 'userpw' placeholder="PASSWORD">
        <br>확인:    <input type = "password" name = 'pwconfirm' id = 'pwconfirm' placeholder="confirm"></p>
         <p>이름:    <input type = "text" name = 'username' id = 'username' placeholder="NAME"></p>
         <p>전화번호:<input type = "tel" name = 'userphone' id = 'userphone' placeholder="PHONE"></p>
         <p>이메일:  <input type = "text" name = 'useremail' id = 'useremail' placeholder="E-MAIL"></p>   
-        <p><input type = "submit" value = 'SignUp' name = 'SignUp_btn' id = 'SignUp_btn'></p>     
+        <p><input type = "submit" value = 'SignUp' name = 'SignUp_btn' id = 'SignUp_btn' disabled = 'true'></p>     
         </pre>
     </fieldset>
     </form>

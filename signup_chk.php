@@ -18,7 +18,7 @@ ini_set("display_errors",1);
      echo "<h2>서버와의 연결 실패</h2>";
 
 
-$userid = $_POST["userid"];
+$userid = $_POST["decide_id"];
 
 $userpw = $_POST["userpw"];
 $confirm = $_POST["pwconfirm"];
@@ -30,7 +30,7 @@ $userphone = $_POST["userphone"];
 $email = $_POST["useremail"];
 
 function loginchk(){
-    if($_POST["userid"] == '')
+    if($_POST["decide_id"] == '')
     {
         ?>
         <script>
