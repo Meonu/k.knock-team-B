@@ -29,60 +29,11 @@ $userphone = $_POST["userphone"];
 
 $email = $_POST["useremail"];
 
-function loginchk(){
-    if($_POST["decide_id"] == '')
-    {
-        ?>
-        <script>
-            alert("아이디를 입력하세요.");
-        </script>
-        <?php
-        return 0;
 
-    }
-    else if($_POST["userpw"] == '')
-    {
-        ?>
-        <script>
-            alert("비밀번호를 입력하세요.");
-        </script>
-        <?php
-        return 0;
-    }
-    else if($_POST["username"] == '')
-    {
-        ?>
-        <script>
-            alert("이름을 입력하세요.");
-        </script>
-        <?php
-        return 0;
-    }
-    else if($_POST["userphone"] == '')
-    {
-        ?>
-        <script>
-            alert("전화번호를 입력하세요.");
-        </script>
-        <?php
-        return 0;
-    }
-    else if(strcmp($_POST["userpw"],$_POST["pwconfirm"])==0)
-    {
-        ?>
-        <script>
-            alert("비밀번호가 일치하지 않습니다.");
-        </script>
-        <?php
-        return 0;
-    }
-    else return 1;
-}
+$hashedPassword = password_hash($_POST['userpw'], PASSWORD_DEFAULT);
+$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES('$userid','$hashedPassword','$name','$userphone','$email')";
 
-$sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES('$userid','$userpw','$name','$userphone','$email')";
 
-if(loginchk() != 0)
-{
     if(mysqli_query($connect,$sql) === false)
     {
         echo "오류가 발생했습니다.";
@@ -96,6 +47,5 @@ if(loginchk() != 0)
         </script>   
     <?php
     }
-}
 
 ?>  

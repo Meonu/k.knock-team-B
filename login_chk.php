@@ -9,8 +9,7 @@ $userpw = $_POST["userpw"];
 $idsql = "SELECT * FROM mem_info where userid='$userid'";
 $idresult = mysqli_fetch_array(mysqli_query($connect, $idsql));
 
-$pwsql = "SELECT * FROM mem_info where userid='$userpw'";
-$pwresult = mysqli_fetch_array(mysqli_query($connect, $pwsql));
+
 
 if (!$connect)
      echo "<h2>서버와의 연결 실패</h2>";
