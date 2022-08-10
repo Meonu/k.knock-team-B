@@ -13,11 +13,6 @@ $row = mysqli_fetch_array($idresult);
 $hashedPassword = $row['userpw'];
 $row['id'];
 
-foreach($row as $key => $r){
-    echo "{$key} : {$r} <br>";
-}
-
-
 $passwordResult = password_verify($userpw, $hashedPassword);
 
 if ($passwordResult === true) {
