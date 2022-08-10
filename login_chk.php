@@ -7,31 +7,39 @@ $userid = $_POST["userid"];
 $userpw = $_POST["userpw"];
 
 $idsql = "SELECT * FROM mem_info where userid='$userid'";
-$idresult = mysqli_fetch_array(mysqli_query($connect, $idsql));
+$idresult = mysqli_query($connect, $idsql); //id 검증
 
-$pwsql = "SELECT * FROM mem_info where userid='$userpw'";
-$pwresult = mysqli_fetch_array(mysqli_query($connect, $pwsql));
+$row = mysqli_fetch_array($idresult);
+$hashedPassword = $row['userpw'];
+$row['id'];
 
-if (!$connect)
-     echo "<h2>서버와의 연결 실패</h2>";
-    else if(!$idresult || !$pwresult){
-        
-        ?>
-        <script>
-        alert("아이디 또는 비밀번호가 잘못되었습니다.")
-        </script>
-        <?php
-    } 
-    else 
-    {
-        ?>
-        <script>
-        alert("로그인을 정상적으로 성공하였습니다.")
+foreach($row as $key => $r){
+    echo "{$key} : {$r} <br>";
+}
+
+
+$passwordResult = password_verify($userpw, $hashedPassword);
+
+if ($passwordResult === true) {
+    // 로그인 성공
+    // 세션에 id 저장
+    session_start();
+    $_SESSION['userId'] = $row['id'];
+    print_r($_SESSION);
+    echo $_SESSION['userId'];
+    
+?>
+    <script>
+        alert("로그인에 성공하였습니다.")
         location.href = "index.php";
-        </script>
-        <?php
-    }
-
-
-
+    </script>
+<?php
+} else {
+    // 로그인 실패 
+?>
+    <script>
+        alert("로그인에 실패하였습니다");
+    </script>
+<?php
+}
 ?>
