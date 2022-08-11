@@ -5,29 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to KYW world</title>
-    <script>
-         function right_login()
-    {
-        var userid = document.getElementById("userid").value;
-        var userpw = document.getElementById("userpw").value;
-
-        if(userid == '')
-        {
-            alert("아이디를 입력해주세요.");
-            return false;
-        }
-        else if (userpw == '')
-        {
-            alert("비밀번호를 입력해주세요");
-            return false;
-        }
-        else
-        {
-            alert("yeah");
-            return true;
-        }
-    }
-    </script>
+    <script src="loginfunc.js"></script>
 </head>
 <body>
     <div id="login_wrap">

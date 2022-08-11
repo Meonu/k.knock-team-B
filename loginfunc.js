@@ -16,7 +16,6 @@
         }
         else
         {
-            alert("yeah");
-            return true;
+        return true;
         }
     }
