@@ -11,7 +11,7 @@ $idresult = mysqli_query($connect, $idsql); //id 검증
 
 $row = mysqli_fetch_array($idresult);
 $hashedPassword = $row['userpw'];
-$row['userid'];
+
 
 $passwordResult = password_verify($userpw, $hashedPassword);
 
