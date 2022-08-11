@@ -34,7 +34,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 실패하였습니다");
-        location.herf = "./index.html";
+        location.herf = "http://52.231.107.199:6365/";
     </script>
 <?php
 }
