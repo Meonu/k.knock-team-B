@@ -8,6 +8,13 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시판 페이지 입니다.</title>
+    <script>
+        function logout()
+        {
+            session_unset();
+            session_destroy();
+        }
+    </script>
 </head>
 <body>
     <?php
@@ -30,6 +37,6 @@ session_start();
         }
     ?>
 
-    
+
 </body>
 </html>
