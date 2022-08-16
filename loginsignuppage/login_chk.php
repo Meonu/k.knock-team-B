@@ -26,7 +26,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 성공하였습니다.")
-        location.href = "./index.php";
+        location.href = "../index.php";
     </script>
 <?php
 } else {
@@ -34,7 +34,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("로그인에 실패하였습니다");
-        location.herf = "http://52.231.107.199:6365/";
+        location.herf = "./loginpage.html";
     </script>
 <?php
 }
