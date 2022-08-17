@@ -71,6 +71,10 @@ session_start();
         $sql = "select * from board order by no desc limit 0,10";
         $result = mysqli_fetch_array(mysqli_query($connect, $sql));
 
+        if($result == false)
+        {
+            echo '데이터 로딩을 실패했습니다.';
+        }
         ?>
 
         <tbody>
