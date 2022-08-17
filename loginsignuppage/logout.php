@@ -13,7 +13,7 @@ session_destroy();
 <body>
 <script>
     alert("You've been logged out");
-    location.replace('index.php');
+    location.href= "../index.php"
 </script>
 </body>
 </html>
