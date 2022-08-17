@@ -16,7 +16,7 @@ session_start();
         }
         function write()
         {
-            location.href="../postwrite.php"
+            location.href="./postwrite.php"
         }
     </script>
 </head>
