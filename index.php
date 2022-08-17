@@ -21,16 +21,16 @@ session_start();
         if (isset($_SESSION['userid'])) {
             echo "{$_SESSION['userid']}님 환영합니다  ";
         ?>
-            <li class="nav-item d-flex align-items-center" onclick="logout()">로그아웃</li>
+            <li onclick="logout()">로그아웃</li>
         <?php
         } else {
         ?>
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./loginsignuppage/loginpage.php">회원가입 </a>
+            <li>
+                <a href="./loginsignuppage/loginpage.php">회원가입 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="./loginsignuppage/loginpage.php">로그인</a>
+            <li>
+                <a href="./loginsignuppage/loginpage.php">로그인</a>
             </li>
 
         <?php
