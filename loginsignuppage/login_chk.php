@@ -18,7 +18,7 @@ $passwordResult = password_verify($userpw, $hashedPassword);
 if ($passwordResult === true) {
     // 세션에 id 저장
     session_start();
-    $_SESSION['userId'] = $row['userid'];
+    $_SESSION['userid'] = $row['userid'];
     
 ?>
     <script>
