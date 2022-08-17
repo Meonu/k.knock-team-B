@@ -53,6 +53,36 @@ session_start();
                 <th width="100">조회수</th>
             </tr>
             </thead>
+        <?php
+        error_reporting(E_ALL); 
+        ini_set("display_errors",1);
+    
+        $password = "kyw@514514514";
+        
+        $servername = "localhost";
+    
+        $user = "yeonugim";
+    
+        $DBname = "MEMBER_INFO";
+     
+    
+        $connect = new mysqli($servername, $user, $password, $DBname);
+    
+        $sql = "select * from board order by no desc limit 0,10";
+        $result = mysqli_fetch_array(mysqli_query($connect, $sql));
+
+        while($board = $result)
+        {
+            $title=$board["title"];
+        }
+        ?>
+
+        <tbody>
+            <tr>
+                <td width = "70"><?php echo $board['no']; ?></td>
+                <td width = "500"><a href=""><?php echo $title;?></a></td>
+            </tr>
+        </tbody>
     
 
 
