@@ -21,7 +21,8 @@ session_start();
         if (isset($_SESSION['userid'])) {
             echo "{$_SESSION['userid']}님 환영합니다  ";
         ?>
-            <li onclick="logout()">로그아웃</li>
+            <li>
+                <a href="./loginsignuppage/logout.php"></a>로그아웃</li>
         <?php
         } else {
         ?>
