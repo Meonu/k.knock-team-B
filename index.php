@@ -71,10 +71,6 @@ session_start();
         $sql = "select * from board order by no desc limit 0,10";
         $result = mysqli_fetch_array(mysqli_query($connect, $sql));
 
-        while($board = $result)
-        {
-            $title=$board["title"];
-        }
         ?>
 
         <tbody>
