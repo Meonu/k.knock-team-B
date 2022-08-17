@@ -22,7 +22,8 @@ session_start();
             echo "{$_SESSION['userid']}님 환영합니다  ";
         ?>
             <li>
-                <a href="./loginsignuppage/logout.php"></a>로그아웃</li>
+                <a href="./loginsignuppage/logout.php">로그아웃</a>
+            </li>
         <?php
         } else {
         ?>

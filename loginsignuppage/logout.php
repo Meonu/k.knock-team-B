@@ -12,8 +12,8 @@ session_destroy();
 </head>
 <body>
 <script>
-    alert("You've been logged out");
-    location.href= "../index.php"
+    alert("로그아웃 되었습니다.");
+    location.href= "../index.php";
 </script>
 </body>
 </html>
