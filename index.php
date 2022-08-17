@@ -89,6 +89,11 @@ session_start();
         </tbody>
         <?php } ?>
 
+        <p>
+        <input type="button" value="글쓰기">
+        </p>
+        
+
 
 </body>
 </html>
