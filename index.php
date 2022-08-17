@@ -80,7 +80,7 @@ session_start();
         <tbody>
             <tr>
                 <td width = "70"><?php echo $board['no']; ?></td>
-                <td width = "500"><a href=""><?php echo $title;?></a></td>
+                <td width = "500"><a href=""><?php echo $board['title'];?></a></td>
             </tr>
         </tbody>
     
