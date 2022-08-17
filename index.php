@@ -14,6 +14,10 @@ session_start();
             session_unset();
             session_destroy();
         }
+        function write()
+        {
+            location.href="../postwrite.php"
+        }
     </script>
 </head>
 <body>
@@ -91,7 +95,7 @@ session_start();
         <?php } ?>
         </p>
         <p>
-        <input type="button" value="글쓰기">
+        <input type="button" value="글쓰기" onclick = write()>
         </p>
         
 
