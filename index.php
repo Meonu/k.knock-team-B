@@ -26,11 +26,11 @@ session_start();
         } else {
         ?>
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./loginsignuppage/loginpage.html">회원가입 </a>
+                <a class="nav-link active" aria-current="page" href="./loginsignuppage/loginpage.php">회원가입 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="./loginsignuppage/loginpage.html">로그인</a>
+                <a class="nav-link" href="./loginsignuppage/loginpage.php">로그인</a>
             </li>
 
         <?php
