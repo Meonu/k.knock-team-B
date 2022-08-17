@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +9,22 @@
     <script src="loginfunc.js"></script>
 </head>
 <body>
+   
+    <?php if(isset($_SESSION['userid']))
+    {
+       ?>
+       <script> 
+       alert("이미 로그인중 입니다.")
+       location.href = "../index.php";
+        </script> <?php
+    }
+    else
+    {?>
+    
     <div id="login_wrap">
         <div>
             <fieldset style = "width: 150px;">
-            <legend><h1>Login</h1></legend>
+            <legend><h1>Login</h1></legend> 
             <form action="./login_chk.php" method="post" id="login_form" onsubmit="return right_login();">
                 <p><input type="text" name="userid" id="userid" placeholder="ID"></p>
                 <p><input type="password" name="userpw" id="userpw" placeholder="Password"></p>
@@ -22,4 +35,5 @@
             </fieldset>
         </div>
     </div>
+    <?php } ?>
 </body>
