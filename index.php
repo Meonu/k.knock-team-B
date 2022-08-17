@@ -36,11 +36,11 @@ session_start();
             </li>
 
         <?php
-        }
-        ?>
+        }?>
+        
 
         <h1>자유게시판</h1>
-        <h4>자유롭게 글을 쓸 수 있는 게시판입니다.</h4>
+        <h4>글을 작성하고 공유하는 게시판입니다.</h4>
         <table class="list-table">
             <thead>
             <tr>
