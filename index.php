@@ -72,18 +72,18 @@ session_start();
         while($board = $sql -> fetch_array())
         {
             $title = $board['title'];
-        }
+            $no = $board['no'];
         ?>
 
 
 
         <tbody>
             <tr>
-                <td width = "70"><?php echo $board['no']; ?></td>
+                <td width = "70"><?php echo $no; ?></td>
                 <td width = "500"><a href=""><?php echo $title;?></a></td>
             </tr>
         </tbody>
-    
+        <?php } ?>
 
 
 </body>
