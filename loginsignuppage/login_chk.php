@@ -31,7 +31,7 @@ if ($passwordResult === true) {
 ?>
     <script>
         alert("아이디 또는 비밀번호가 일치하지 않습니다.");
-        location.herf = "./loginpage.php";
+        location.href = "./loginpage.php";
     </script>
 <?php
 }
