@@ -44,6 +44,7 @@ $sql = "insert into mem_info(userid,userpw,username,userphone,useremail) VALUES(
     ?>
         <script>
         alert("회원가입이 완료되었습니다.");
+        location.href="../index.php";
         </script>   
     <?php
     }
