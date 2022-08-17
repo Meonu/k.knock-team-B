@@ -53,7 +53,7 @@ session_start();
                 <th width="100">조회수</th>
             </tr>
             </thead>
-    ?>
+    
 
 
 </body>
