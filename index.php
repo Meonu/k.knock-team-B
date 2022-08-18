@@ -90,7 +90,7 @@ session_start();
         <?php } ?>
         </p>
         <p>
-        <input type="button" value="글쓰기" onclick = write()>
+        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
         <input type="text" placeholder="검색">
         </p>
         
