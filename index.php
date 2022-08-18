@@ -76,16 +76,11 @@ session_start();
         $sql = mysqli_query($connect,"select * from board order by no desc limit 0,10");
         while($board = $sql -> fetch_array())
         {
-            $title = $board['title'];
-            $no = $board['no'];
         ?>
-
-
-
         <tbody>
             <tr>
-                <td width = "70"><?php echo $no; ?></td>
-                <td width = "500"><a href=""><?php echo $title;?></a></td>
+                <td width = "70"><?php echo $board['no']; ?></td>
+                <td width = "500"><a href=""><?php echo $board['title'];?></a></td>
                 <td width = "120"><?php echo $board['name'];?></a></td>
                 <td width = "100"><?php echo $board['date'];?></a></td>
                 <td width = "100"><?php echo $board['thumb'];?></a></td>
@@ -96,6 +91,7 @@ session_start();
         </p>
         <p>
         <input type="button" value="글쓰기" onclick = write()>
+        <input type="text" placeholder="검색">
         </p>
         
 
