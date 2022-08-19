@@ -18,7 +18,7 @@
     <td>글쓴이</td><td><input type = "text" id="name" placeholder="닉네임을 입력하세요."></td>
     </tr>
     <tr>
-    <td>내용</td><td><textarea id="content" cols=85 rows=20></textarea></td>
+    <td>내용</td><td><textarea name="content" cols=85 rows=20></textarea></td>
     </tr>
     </table>
     <input type="submit" id="post_btn" value="완료">
