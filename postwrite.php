@@ -12,13 +12,16 @@
     <form action="./posting.php" method="post" id="posting">
     <table>
     <tr>
-    <td>제목</td><td><input type = "text" name="title" id="title" placeholder="제목을 입력하세요."></td>
+    <td>제목</td><td><input type = "text" name="title" id="title" placeholder="제목을 입력하세요." required></td>
     </tr>
     <tr>
-    <td>글쓴이</td><td><input type = "text" name="name" id="name" placeholder="닉네임을 입력하세요."></td>
+    <td>글쓴이</td><td><input type = "text" name="name" id="name" placeholder="닉네임을 입력하세요." required></td>
     </tr>
     <tr>
-    <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20></textarea></td>
+    <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20 required></textarea></td>
+    </tr>
+    <tr>
+    <td>비밀번호</td><td><input type="password" name="pw" placeholder="password" size=10 maxlength="10" required></td>
     </tr>
     </table>
     <input type="submit" id="post_btn" value="완료">
