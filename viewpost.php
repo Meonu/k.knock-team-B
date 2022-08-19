@@ -41,7 +41,7 @@
         </tr>
 
     </table>
-    <div>
+    <div align="center">
         <button onclick="location.href='./index.php'">목록으로</button>
         <button onclick="location.href=''">수정하기</button>
         <button onclick="location.href=''">삭제하기</button>
