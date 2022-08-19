@@ -12,10 +12,10 @@
     <form action="./posting.php" method="post" id="posting">
     <table>
     <tr>
-    <td>제목</td><td><input type = "text" id="title" placeholder="제목을 입력하세요."></td>
+    <td>제목</td><td><input type = "text" name="title" id="title" placeholder="제목을 입력하세요."></td>
     </tr>
     <tr>
-    <td>글쓴이</td><td><input type = "text" id="name" placeholder="닉네임을 입력하세요."></td>
+    <td>글쓴이</td><td><input type = "text" name="name" id="name" placeholder="닉네임을 입력하세요."></td>
     </tr>
     <tr>
     <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20></textarea></td>
