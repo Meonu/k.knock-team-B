@@ -27,7 +27,7 @@ if($passwordResult === false)
 else{
      ?>
     <script>alert("비밀번호가 인증되었습니다.");
-    opener.parent.location.href="modify.php?no=<?php echo $no ?>";
+    opener.parent.modify();
     window.close();
     </script>
     <?php

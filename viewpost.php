@@ -32,6 +32,10 @@
             url = "./inputpw.php?no=<?php echo $no ?>";
             window.open(url,"chkpw","width = 400, height=200");
         }
+        function modify()
+        {
+            location.href = "./modify.php?no=<?php echo $no ?>;"
+        }
     </script>
 </head>
 <body>
