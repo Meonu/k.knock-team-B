@@ -26,6 +26,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $rows['title']; ?></title>
+    <script>
+    function check()
+    {
+        var userid = document.getElementById("userid").value;
+        if(userid)
+        {
+            url = "idcheck.php?userid="+userid;
+            window.open(url,"chkid","width = 400, height=200");
+        }
+        else
+        {
+            alert("비밀번호를 입력하세요");
+            return 0;
+        }
+    }
+    </script>
 </head>
 <body>
     <table align="center">
@@ -43,7 +59,7 @@
     </table>
     <div align="center">
         <button onclick="location.href='./index.php'">목록으로</button>
-        <button onclick="location.href='./modify.php?no=<?=$no?>'">수정하기</button>
+        <button onclick="location.href='./modify.php?no=<?=$no?>'" onsubmit="return check()">수정하기</button>
         <button onclick="location.href='./delete.php?no=<?=$no?>'">삭제하기</button>
     </div>
 </body>
