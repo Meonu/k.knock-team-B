@@ -11,7 +11,19 @@ $row = mysqli_fetch_array($result);
 
 if($row)
 {
-    echo 'good';
+    ?>
+    <script>
+        alert("좋아");
+    </script>
+    <?php
+}
+else
+{
+    ?>
+    <script>
+        alert("quffh");
+    </script>
+    <?php
 }
 
 $hashedPassword = $row['password'];
