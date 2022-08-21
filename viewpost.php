@@ -26,9 +26,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $rows['title']; ?></title>
-    <script src="postpwcheck.js">
+    <script>
         function check()
         {  
+            alert("안녕");
             url = "./pwcheck.php?no=<?php echo $no ?>";
             window.open(url,"chkpw","width = 400, height=200");
         }
