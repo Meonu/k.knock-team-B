@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL); 
+    ini_set("display_errors",1);
     $no = $_GET['no'];
     $query = "select title, content, date, view, name from board where no = $no";
     $result = $connect -> query($query);
@@ -28,7 +30,7 @@
                 <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20 required><?php echo $rows['content'] ?></textarea></td>
             </tr>
             </table>
-                ㄴ<input type="submit" name="modyfy" value="수정">
+                <input type="submit" name="modyfy" value="수정">
             </form>
         </div>
     
