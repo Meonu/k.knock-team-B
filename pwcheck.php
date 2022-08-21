@@ -23,4 +23,12 @@ if($passwordResult === true)
     <?php
     
 }
+else{
+    ?>
+    <script>
+        alert("비밀번호가 일치하지 않습니다.");
+        window.close();
+    </script>
+    <?php
+}
 ?>
