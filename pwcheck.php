@@ -4,7 +4,7 @@ $pw = $_POST['pw'];
 
 $connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
 
-$sql = "SELECT * FROM mem_info where no='$no'";
+$sql = "SELECT * FROM board where no='$no'";
 $result = mysqli_query($connect, $sql); //id 검증
 
 $row = mysqli_fetch_array($result);
