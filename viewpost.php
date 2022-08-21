@@ -29,7 +29,7 @@
     <script>
         function check()
         {  
-            url = "./pwcheck.php?no=<?php echo $no ?>";
+            url = "./inputpw.php?no=<?php echo $no ?>";
             window.open(url,"chkpw","width = 400, height=200");
         }
     </script>

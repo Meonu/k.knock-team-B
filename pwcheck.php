@@ -1,12 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    hihi
-</body>
-</html>
+<?php
+$no = $_GET['no'];
+$pw = $_POST['pw'];
+
+$connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
+
+$sql = "SELECT * FROM mem_info where no='$no'";
+$result = mysqli_query($connect, $sql); //id 검증
+
+$row = mysqli_fetch_array($result);
+$hashedPassword = $row['password'];
+
+
+$passwordResult = password_verify($pw, $hashedPassword);
+
+if($passwordResult === true)
+{
+    ?>
+    <script>alert("비밀번호가 인증되었습니다.");
+    opener.parent.location.href="modify.php?no=<?php echo $no ?>";
+    window.close();
+    </script>
+    <?php
+    
+}
+?>

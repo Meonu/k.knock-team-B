@@ -20,9 +20,10 @@ $name=$_POST["name"];
 $title=$_POST["title"];
 $content=$_POST["content"];
 $pw=$_POST["pw"];
+$hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
 $date = date('Y-m-d');
 
-$query = "insert into board (name, password, title, content, date)  values ('$name', '$pw', '$title', '$content', '$date')";
+$query = "insert into board (name, password, title, content, date)  values ('$name', '$hashedPassword', '$title', '$content', '$date')";
 
 if(mysqli_query($connect,$query))
 {
