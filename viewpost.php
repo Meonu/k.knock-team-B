@@ -29,7 +29,6 @@
     <script>
         function check()
         {  
-            alert("안녕");
             url = "./pwcheck.php?no=<?php echo $no ?>";
             window.open(url,"chkpw","width = 400, height=200");
         }
