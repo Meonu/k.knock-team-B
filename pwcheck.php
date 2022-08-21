@@ -13,21 +13,21 @@ $hashedPassword = $row['password'];
 
 $passwordResult = password_verify($pw, $hashedPassword);
 
-if($passwordResult === true)
+if($passwordResult === false)
 {
-    ?>
-    <script>alert("비밀번호가 인증되었습니다.");
-    opener.parent.location.href="modify.php?no=<?php echo $no ?>";
-    window.close();
+   ?>
+    <script>
+        alert("비밀번호가 일치하지 않습니다.");
+        window.close();
     </script>
     <?php
     
 }
 else{
-    ?>
-    <script>
-        alert("비밀번호가 일치하지 않습니다.");
-        window.close();
+     ?>
+    <script>alert("비밀번호가 인증되었습니다.");
+    opener.parent.location.href="modify.php?no=<?php echo $no ?>";
+    window.close();
     </script>
     <?php
 }
