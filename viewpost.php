@@ -27,9 +27,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $rows['title']; ?></title>
     <script src="postpwcheck.js">
-        <?php
-        echo "var no = '$no';";
-        ?>
+        function check()
+{  
+    url = "./delete.php?no=<?php echo $no ?>";
+    window.open(url,"chkpw","width = 400, height=200");
+}
     </script>
 </head>
 <body>
