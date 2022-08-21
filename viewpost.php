@@ -28,10 +28,10 @@
     <title><?php echo $rows['title']; ?></title>
     <script src="postpwcheck.js">
         function check()
-{  
-    url = "./delete.php?no=<?php echo $no ?>";
-    window.open(url,"chkpw","width = 400, height=200");
-}
+        {  
+            url = "./pwcheck.php?no=<?php echo $no ?>";
+            window.open(url,"chkpw","width = 400, height=200");
+        }
     </script>
 </head>
 <body>
