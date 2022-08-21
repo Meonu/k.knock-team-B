@@ -8,6 +8,12 @@ $sql = "SELECT * FROM mem_info where no='$no'";
 $result = mysqli_query($connect, $sql); //id 검증
 
 $row = mysqli_fetch_array($result);
+
+if($row)
+{
+    echo 'good';
+}
+
 $hashedPassword = $row['password'];
 
 
