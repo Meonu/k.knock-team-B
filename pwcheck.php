@@ -5,28 +5,11 @@ $pw = $_POST['pw'];
 $connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
 
 $sql = "SELECT * FROM board where no='$no'";
-$result = mysqli_query($connect, $sql); //id 검증
+$result = $connect -> query($sql);
+$rows = mysqli_fetch_assoc($result);
 
-$row = mysqli_fetch_array($result);
 
-if($row)
-{
-    ?>
-    <script>
-        alert("좋아");
-    </script>
-    <?php
-}
-else
-{
-    ?>
-    <script>
-        alert("quffh");
-    </script>
-    <?php
-}
-
-$hashedPassword = $row['password'];
+$hashedPassword = $rows['password'];
 
 
 $passwordResult = password_verify($pw, $hashedPassword);
