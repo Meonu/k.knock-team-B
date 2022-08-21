@@ -21,7 +21,7 @@ $connect = new mysqli($servername, $user, $password, $DBname);
 if (!$connect)
  echo "<h2>서버와의 연결 실패</h2>";
 
- $query = "update board set (title, content)  values ('$title', '$content')";
+ $query = "update board set title = '$title' ,content ='$content' where no = $no";
 
 
 
