@@ -25,7 +25,7 @@ ini_set("display_errors",1);
 </head>
 <body>
     <h4>비밀번호를 입력하세요.</h4>
-    <form action="./pwcheck.php?no=<? echo $no ?>" method="post">
+    <form action="./pwcheck.php?no=<?php echo $no ?>" method="post">
     <input type="password" name="pw" id="pw" placeholder="비밀번호">
     </form>
 </body>
