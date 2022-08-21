@@ -29,7 +29,7 @@ if($passwordResult === false)
 else{
      ?>
     <script>alert("비밀번호가 인증되었습니다.");
-    opener.parent.modify();
+    opener.modify();
     window.close();
     </script>
     <?php
