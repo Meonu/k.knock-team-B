@@ -2,6 +2,20 @@
     error_reporting(E_ALL); 
     ini_set("display_errors",1);
     $no = $_GET['no'];
+    
+    $password = "kyw@514514514";
+    
+    $servername = "localhost";
+
+    $user = "yeonugim";
+
+    $DBname = "MEMBER_INFO";
+ 
+
+    $connect = new mysqli($servername, $user, $password, $DBname);
+
+    if (!$connect)
+     echo "<h2>서버와의 연결 실패</h2>";
     $query = "select title, content, date, view, name from board where no = $no";
     $result = $connect -> query($query);
     $rows = mysqli_fetch_assoc($result);
