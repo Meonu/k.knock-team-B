@@ -85,9 +85,12 @@ session_start();
     
         $connect = new mysqli($servername, $user, $password, $DBname);
         
-        $orderset = $_GET['order'];
-        if($orderset==null)
+        $orderset = null;
+        if($_GET['order']==null)
         {$orderset="desc";}
+        else{
+            $orderset = $_GET['order'];
+        }
         $sql = mysqli_query($connect,"select * from board order by no $orderset limit 0,10");
         while($board = $sql -> fetch_array())
         {
