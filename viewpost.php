@@ -15,7 +15,7 @@
 
     $connect = new mysqli($servername, $user, $password, $DBname);
 
-        $query = "SELECT title, content, date, view, name from board where no = $no";
+        $query = "SELECT title, content, date, view, name, thumb from board where no = $no";
         $result = $connect -> query($query);
         $rows = mysqli_fetch_assoc($result);
 ?>
@@ -57,6 +57,7 @@
         </tr>
         <tr>
             <td>조회수</td><td><?php echo $rows['view'] ?></td>
+            <td>좋아요</td><td><?php echo $rows['thumb']?></td>
         </tr>
         <tr>
             <td><?php echo $rows['content'] ?></td>
