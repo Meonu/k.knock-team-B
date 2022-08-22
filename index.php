@@ -91,7 +91,14 @@ session_start();
         </p>
         <p>
         <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
-        <input type="text" placeholder="검색">
+        <form action="./search.php">
+        <select name="category">
+            <option value="title">제목</option>
+            <option value="name">글쓴이</option>
+            <option value="content">내용</option>
+        </select>
+        <input type="text" name="search" placeholder="검색"><input type="submit" value="검색">
+        </form>
         </p>
         
 
