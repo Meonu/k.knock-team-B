@@ -73,9 +73,12 @@ session_start();
         $DBname = "MEMBER_INFO";
      
     
+        $category=$_POST['category'];
+        $serach=$_POST['search'];
+
         $connect = new mysqli($servername, $user, $password, $DBname);
         
-        $sql = mysqli_query($connect,"select * from board order by no desc limit 0,10");
+        $sql = mysqli_query($connect,"select * from board where $category like '%{$search}%'");
         while($board = $sql -> fetch_array())
         {
         ?>
@@ -91,6 +94,7 @@ session_start();
         </table>
         <?php } ?>
         <p>
+        
         <form action="./search.php" method="post">
         <select name="category">
             <option value="title">제목</option>
@@ -98,7 +102,7 @@ session_start();
             <option value="content">내용</option>
         </select>
         <input type="text" name="search" placeholder="검색"><input type="submit" value="검색">
-        </form>
+        </form> 
         </p>
         
 
