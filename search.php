@@ -74,7 +74,7 @@ session_start();
      
     
         $category=$_POST['category'];
-        $serach=$_POST['search'];
+        $search=$_POST['search'];
 
         $connect = new mysqli($servername, $user, $password, $DBname);
         
