@@ -66,12 +66,14 @@ session_start();
             <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
         </div>
        
-        <form action="./search.php?category=<?php echo $category?>&search=<?php echo $search?>" method="get" name="orderchange">
+        <form action="./search.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
             <option value=""><?php echo $orderset_ko ?></option>
             <option value="desc">최신순 보기</option>
             <option value="asc">오래된순 보기</option>
         </select>
+        <input type="hidden" name=category value="<?php echo $category?>">
+        <input type="hidden" name="search" value="search=<?php echo $search?>"
         </form>
         <table class="list-table">
             <thead>
