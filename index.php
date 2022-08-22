@@ -45,7 +45,8 @@ session_start();
 
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
-        <p>
+        
+            <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
         <table class="list-table">
             <thead>
             <tr>
@@ -58,6 +59,7 @@ session_start();
                 <th width="100">조회수</th>
             </tr>
             </thead>
+        </table>
         <?php
         error_reporting(E_ALL); 
         ini_set("display_errors",1);
@@ -88,9 +90,8 @@ session_start();
             </tr>
         </table>
         <?php } ?>
-        </p>
         <p>
-        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        
         <form action="./search.php">
         <select name="category">
             <option value="title">제목</option>
