@@ -54,6 +54,8 @@
         </tr>
         <tr>
             <td>작성자</td><td><?php echo $rows['name'] ?></td>
+        </tr>
+        <tr>
             <td>조회수</td><td><?php echo $rows['view'] ?></td>
         </tr>
         <tr>
