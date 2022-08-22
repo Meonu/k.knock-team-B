@@ -104,8 +104,5 @@ session_start();
         <input type="text" name="search" placeholder="검색" value="<?php echo $search ?>"><input type="submit" value="검색">
         </form> 
         </p>
-        
-
-
 </body>
 </html>

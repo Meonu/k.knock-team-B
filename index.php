@@ -18,6 +18,10 @@ session_start();
         {
             location.href="./postwrite.php"
         }
+        function changevalue(obj)
+        {
+            document.orderset.value=obj.value;
+        }
     </script>
 </head>
 <body>
@@ -45,8 +49,13 @@ session_start();
 
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
-        
-            <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        <div>
+        <select name="order" id=order onchange="changevalue(this)">
+            <option value="desc">최신순 보기</option>
+            <option value="asc">오래된순 보기</option>
+        </select>
+        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        </div>
         <table class="list-table">
             <thead>
             <tr>
@@ -75,7 +84,9 @@ session_start();
     
         $connect = new mysqli($servername, $user, $password, $DBname);
         
-        $sql = mysqli_query($connect,"select * from board order by no desc limit 0,10");
+        $orderset = "desc";
+
+        $sql = mysqli_query($connect,"select * from board order by no $orderset limit 0,10");
         while($board = $sql -> fetch_array())
         {
         ?>
