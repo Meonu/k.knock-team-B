@@ -92,7 +92,7 @@ session_start();
         <?php } ?>
         <p>
         
-        <form action="./search.php">
+        <form action="./search.php" method="post">
         <select name="category">
             <option value="title">제목</option>
             <option value="name">글쓴이</option>
