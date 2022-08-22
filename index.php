@@ -54,6 +54,7 @@ session_start();
         </div>
         <form action="./index.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
+            <option value="">게시글 정렬</option>
             <option value="desc">최신순 보기</option>
             <option value="asc">오래된순 보기</option>
         </select>
