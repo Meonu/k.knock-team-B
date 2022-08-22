@@ -77,7 +77,7 @@ session_start();
         while($board = $sql -> fetch_array())
         {
         ?>
-        <tbody>
+        <table>
             <tr>
                 <td width = "70"><?php echo $board['no']; ?></td>
                 <td width = "500"><a href="viewpost.php?no=<?php echo $board['no']?>"><?php echo $board['title'];?></a></td>
@@ -86,7 +86,7 @@ session_start();
                 <td width = "100"><?php echo $board['thumb'];?></a></td>
                 <td width = "100"><?php echo $board['view'];?></a></td>
             </tr>
-        </tbody>
+        </table>
         <?php } ?>
         </p>
         <p>
