@@ -73,8 +73,8 @@ session_start();
         $DBname = "MEMBER_INFO";
      
     
-        $category=$_POST['category'];
-        $search=$_POST['search'];
+        $category=$_GET['category'];
+        $search=$_GET['search'];
 
         $connect = new mysqli($servername, $user, $password, $DBname);
         
@@ -95,7 +95,7 @@ session_start();
         <?php } ?>
         <p>
         
-        <form action="./search.php" method="post">
+        <form action="./search.php" method="get">
         <select name="category">
             <option value="title">제목</option>
             <option value="name">글쓴이</option>
