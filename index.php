@@ -51,7 +51,7 @@ session_start();
         {
             $orderset_ko ="게시글 정렬";
         }
-        else if(strcmp($_GET['oorer'],"desc")==0){
+        else if(strcmp($_GET['order'],"desc")==0){
             $orderset_ko = "최신순 보기";
         }
         else{
