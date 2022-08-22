@@ -86,7 +86,7 @@ session_start();
         $connect = new mysqli($servername, $user, $password, $DBname);
         
         $orderset = null;
-        if($_GET['order']==null)
+        if(isset($_GET['order'])==false)
         {$orderset="desc";}
         else{
             $orderset = $_GET['order'];
