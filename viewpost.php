@@ -27,14 +27,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $rows['title']; ?></title>
     <script>
-        function check()
+        function mdcheck()
         {  
-            url = "./inputpw.php?no=<?php echo $no ?>";
+            url = "./inputpw.php?no=<?php echo $no ?>&method=modify";
             window.open(url,"chkpw","width = 400, height=200");
         }
-        function modify()
+        function delcheck()
+        {
+            url = "./inputpw.php?no=<?php echo $no ?>&method=delete";
+            window.open(url,"chkpw","width = 400, height=200");
+        }
+        function postmodify()
         {
             location.href = "./modify.php?no=<?php echo $no ?>;"
+        }
+        function postdelete()
+        {
+            location.href = "./deletepost.php?no=<?php echo $no ?>"
         }
     </script>
 </head>
@@ -54,7 +63,7 @@
     </table>
     <div align="center">
         <button onclick="location.href='./index.php'">목록으로</button>
-        <button onclick="check();">수정하기</button>
+        <button onclick="mdcheck();">수정하기</button>
         <button onclick="location.href='./delete.php?no=<?=$no?>'">삭제하기</button>
     </div>
 </body>

@@ -12,7 +12,8 @@ ini_set("display_errors",1);
 
     $connect = new mysqli($servername, $user, $password, $DBname);
 
-    $no = $_GET["no"];
+    $no = $_GET['no'];
+    $method=$_GET['method'];
 
     ?>
 <!DOCTYPE html>
@@ -25,7 +26,7 @@ ini_set("display_errors",1);
 </head>
 <body>
     <h4>비밀번호를 입력하세요.</h4>
-    <form action="./pwcheck.php?no=<?php echo $no ?>" method="post">
+    <form action="./pwcheck.php?no=<?php echo $no ?>&method=<?php echo $method ?>" method="post">
     <input type="password" name="pw" id="pw" placeholder="비밀번호">
     </form>
 </body>

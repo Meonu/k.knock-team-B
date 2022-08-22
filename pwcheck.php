@@ -2,7 +2,9 @@
 error_reporting(E_ALL); 
 ini_set("display_errors",1);
 $no = $_GET['no'];
+$method = $_GET['method'];
 $pw = $_POST['pw'];
+
 
 $connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
 
@@ -28,10 +30,24 @@ if($passwordResult === false)
 }
 else{
      ?>
-    <script>alert("비밀번호가 인증되었습니다.");
-    opener.modify();
-    window.close();
-    </script>
-    <?php
+    <script>alert("비밀번호가 인증되었습니다.");</script>
+    <?php 
+    if(strcmp($method,'modify')==0)
+    {   ?>
+         <script>
+        opener.postmodify();
+        window.close();
+        </script>
+        <?php 
+    }
+    else if(strcmp($method,'delete')==0)
+    {
+        ?>
+        <script>
+            opener.postdelete();
+            window.close();
+        </script>
+        <?php
+    }
 }
 ?>
