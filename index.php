@@ -21,6 +21,7 @@ session_start();
         function changevalue(obj)
         {
             document.orderset.value=obj.value;
+            location.href="./index.php?order="+obj.value;
         }
     </script>
 </head>
@@ -84,8 +85,9 @@ session_start();
     
         $connect = new mysqli($servername, $user, $password, $DBname);
         
-        $orderset = "desc";
-
+        $orderset = $_GET['order'];
+        if($orderset==null)
+        {$orderset="desc";}
         $sql = mysqli_query($connect,"select * from board order by no $orderset limit 0,10");
         while($board = $sql -> fetch_array())
         {
