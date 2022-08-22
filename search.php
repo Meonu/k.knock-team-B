@@ -18,6 +18,10 @@ session_start();
         {
             location.href="./postwrite.php"
         }
+        function changevalue()
+        {
+            document.orderchange.submit();
+        }
     </script>
 </head>
 <body>
