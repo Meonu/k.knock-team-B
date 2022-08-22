@@ -101,7 +101,7 @@ session_start();
             <option value="name">글쓴이</option>
             <option value="content">내용</option>
         </select>
-        <input type="text" name="search" placeholder="검색"><input type="submit" value="검색">
+        <input type="text" name="search" placeholder="검색" value="<?php echo $search ?>"><input type="submit" value="검색">
         </form> 
         </p>
         
