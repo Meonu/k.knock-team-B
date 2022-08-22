@@ -50,14 +50,15 @@ session_start();
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
         <div>
+        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        </div>
         <form action="./index.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
             <option value="desc">최신순 보기</option>
             <option value="asc">오래된순 보기</option>
         </select>
-        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
         </form>
-        </div>
+        
         <table class="list-table">
             <thead>
             <tr>
