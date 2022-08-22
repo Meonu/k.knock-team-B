@@ -64,7 +64,7 @@
     <div align="center">
         <button onclick="location.href='./index.php'">목록으로</button>
         <button onclick="mdcheck();">수정하기</button>
-        <button onclick="location.href='./delete.php?no=<?=$no?>'">삭제하기</button>
+        <button onclick="delcheck()">삭제하기</button>
     </div>
 </body>
 </html>
