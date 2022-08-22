@@ -40,13 +40,35 @@ session_start();
             </li>
 
         <?php
-        }?>
+        }
+        
+        $orderset_ko = null;
+        if(isset($_GET['order'])==false)
+        {
+            $orderset_ko ="게시글 정렬";
+        }
+        else if(strcmp($_GET['order'],"desc")==0){
+            $orderset_ko = "최신순 보기";
+        }
+        else{
+            $orderset_ko = "오래된순 보기";
+        }
+        ?>
         
 
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
-        
+        <div>
             <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        </div>
+       
+        <form action="./search.php?category=<?php echo $category?>&search=<?php echo $search?>" method="get" name="orderchange">
+        <select name="order" id=order onchange="changevalue()">
+            <option value=""><?php echo $orderset_ko ?></option>
+            <option value="desc">최신순 보기</option>
+            <option value="asc">오래된순 보기</option>
+        </select>
+        </form>
         <table class="list-table">
             <thead>
             <tr>
@@ -75,10 +97,16 @@ session_start();
     
         $category=$_GET['category'];
         $search=$_GET['search'];
+        $orderset = null;
+        if(isset($_GET['order'])==false)
+        {$orderset="desc";}
+        else{
+            $orderset = $_GET['order'];
+        }
 
         $connect = new mysqli($servername, $user, $password, $DBname);
         
-        $sql = mysqli_query($connect,"select * from board where $category like '%{$search}%'");
+        $sql = mysqli_query($connect,"select * from board where $category like '%{$search}%' order by no $orderset");
         while($board = $sql -> fetch_array())
         {
         ?>
