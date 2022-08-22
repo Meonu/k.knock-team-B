@@ -44,7 +44,20 @@ session_start();
             </li>
 
         <?php
-        }?>
+        }
+        
+        $orderset_ko = null;
+        if(isset($_GET['order'])==false)
+        {
+            $orderset_ko ="게시글 정렬";
+        }
+        else if($_GET['oorer'] == "desc"){
+            $orderset_ko = "최신순 보기";
+        }
+        else{
+            $orderset_ko = "오래된순 보기";
+        }
+            ?>
         
 
         <h1>자유게시판</h1>
@@ -54,7 +67,7 @@ session_start();
         </div>
         <form action="./index.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
-            <option value="">게시글 정렬</option>
+            <option value=""><?php echo $orderset_ko ?></option>
             <option value="desc">최신순 보기</option>
             <option value="asc">오래된순 보기</option>
         </select>
