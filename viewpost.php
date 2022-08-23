@@ -101,7 +101,7 @@
                 <td><input type="password" name="rep_pw" size="15" placeholder="비밀번호"></td>
             </tr>
             <tr>
-                <td><textarea name="rep_content"></textarea></td>
+                <textarea name="rep_content"></textarea>
             </tr>
             <tr>
                 <td><input type="submit" value="댓글 작성"></td>
