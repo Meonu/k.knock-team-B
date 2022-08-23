@@ -99,7 +99,7 @@
             <input type="text" name="rep_name" size="15" placeholder="아이디">
             <input type="password" name="rep_pw" size="15" placeholder="비밀번호">
             </p>
-            <p><textarea name="rep_content" rows="5" cols="70"></textarea></p>
+            <p><textarea name="rep_content" rows="8" cols="70"></textarea></p>
             <input type="submit" value="댓글 작성">
 
         </form>
