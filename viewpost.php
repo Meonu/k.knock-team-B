@@ -95,18 +95,11 @@
 
     <div class="reply add">
         <form action="./replyadd.php" method="post">
-            <table>
-            <tr>
-                <td><input type="text" name="rep_name" size="15" placeholder="아이디"></td>
-                <td><input type="password" name="rep_pw" size="15" placeholder="비밀번호"></td>
-            </tr>
-            <tr>
-                <textarea name="rep_content"></textarea>
-            </tr>
-            <tr>
-                <td><input type="submit" value="댓글 작성"></td>
-            </tr>
-            </table>
+            <input type="text" name="rep_name" size="15" placeholder="아이디">
+            <input type="password" name="rep_pw" size="15" placeholder="비밀번호">
+            <textarea name="rep_content"></textarea>
+            <input type="submit" value="댓글 작성">
+
         </form>
 
     </div>
