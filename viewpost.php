@@ -74,7 +74,7 @@
         <h4>댓글</h4>
 
         <?php
-        $sql = mysqli_query($connect,"select * from reply where post_num ='$no' order by no desc");
+        $sql = mysqli_query($connect,"select * from reply where post_num ='$no' order by no asc");
         while($reply = $sql -> fetch_array())
         {
         ?>
