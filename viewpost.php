@@ -62,6 +62,9 @@
         <tr>
             <td><?php echo $rows['content'] ?></td>
         </tr>
+        <tr>
+            <td>작성일</td><td><?php echo $rows['date']?></td>
+        </tr>
 
     </table>
     <div align="center">
