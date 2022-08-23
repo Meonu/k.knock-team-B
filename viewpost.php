@@ -78,10 +78,11 @@
         while($reply = $sql -> fetch_array())
         {
         ?>
-            
+            <P>
             <div><?php echo $reply['name']; ?></div>
             <div><?php echo $reply['content']?></div>
             <div><?php echo $reply['date']?></div>
+            </P>
         <?php } ?>
     </div>
 
