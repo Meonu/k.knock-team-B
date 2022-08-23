@@ -69,5 +69,44 @@
         <button onclick="mdcheck();">수정하기</button>
         <button onclick="delcheck()">삭제하기</button>
     </div>
+
+    <div class="reply">
+        <h4>댓글</h4>
+
+        <?php
+        $sql = mysqli_query($connect,"select * from reply where post_num ='$no' order by no desc");
+        while($reply = $sql -> fetch_array())
+        {
+        ?>
+        <table>
+            <tr>
+                <td><?php echo $reply['name']; ?></td>
+            </tr>
+            <tr>
+                <td><?php echo $reply['content']?></td>
+            </tr>
+            <tr>
+                <td><?php echo $reply['date']?></td>
+            </tr>
+
+        </table>
+        <?php } ?>
+    </div>
+
+    <div class="reply add">
+        <form action="./replyadd.php" method="post">
+            <table>
+            <tr>
+                <td><input type="text" name="rep_name" size="15" placeholder="아이디"></td>
+                <td><input type="password" name="rep_pw" size="15" placeholder="비밀번호"></td>
+            </tr>
+            <tr>
+                <td><textarea name="rep_content"></textarea></td>
+            </tr>
+            <input type="submit" value="댓글 작성">
+            </table>
+        </form>
+
+    </div>
 </body>
 </html>
