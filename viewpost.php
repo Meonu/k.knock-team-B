@@ -53,7 +53,7 @@
             <td><?php echo $rows['title'] ?></td>
         </tr>
         <tr>
-            <td>작성자</td><td><?php echo $rows['name'] ?></td>
+            <td>작성자<?php echo $rows['name'] ?></td>
         </tr>
         <tr>
             <td>조회수</td><td><?php echo $rows['view'] ?></td>
