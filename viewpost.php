@@ -56,8 +56,8 @@
             <td>작성자<?php echo $rows['name'] ?></td>
         </tr>
         <tr>
-            <td>조회수</td><td><?php echo $rows['view'] ?></td>
-            <td>좋아요</td><td><?php echo $rows['thumb']?></td>
+            <td>조회수</td><td>0<?php echo $rows['view'] ?></td>
+            <td>좋아요</td><td>0<?php echo $rows['thumb']?></td>
         </tr>
         <tr>
             <td><?php echo $rows['content'] ?></td>
