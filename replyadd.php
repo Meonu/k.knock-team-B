@@ -23,7 +23,7 @@
      $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
      $date = date('Y-m-d');
      
-     $query = "insert into board (name, pw, content, date, post_num)  values ('$name', '$hashedPassword', '$content', '$date', '$no')";
+     $query = "insert into reply (name, pw, content, date, post_num)  values ('$name', '$hashedPassword', '$content', '$date', '$no')";
      
      if(mysqli_query($connect,$query))
      {
