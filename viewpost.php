@@ -103,7 +103,9 @@
             <tr>
                 <td><textarea name="rep_content"></textarea></td>
             </tr>
-            <input type="submit" value="댓글 작성">
+            <tr>
+                <td><input type="submit" value="댓글 작성"></td>
+            </tr>
             </table>
         </form>
 
