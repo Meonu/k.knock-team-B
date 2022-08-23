@@ -78,28 +78,21 @@
         while($reply = $sql -> fetch_array())
         {
         ?>
-        <table>
-            <tr>
-                <td><?php echo $reply['name']; ?></td>
-            </tr>
-            <tr>
-                <td><?php echo $reply['content']?></td>
-            </tr>
-            <tr>
-                <td><?php echo $reply['date']?></td>
-            </tr>
-
-        </table>
+            
+            <div><?php echo $reply['name']; ?></div>
+            <div><?php echo $reply['content']?></div>
+            <div><?php echo $reply['date']?></div>
         <?php } ?>
     </div>
 
     <div class="reply add">
         <form action="./replyadd.php" method="post">
             <p>
-            <input type="text" name="rep_name" size="15" placeholder="아이디">
-            <input type="password" name="rep_pw" size="15" placeholder="비밀번호">
+            <input type="text" name="rep_name" size="15" placeholder="아이디" required>
+            <input type="password" name="rep_pw" size="15" placeholder="비밀번호" required>
             </p>
-            <p><textarea name="rep_content" rows="8" cols="70"></textarea></p>
+            <p><textarea name="rep_content" rows="8" cols="70" reqired></textarea></p>
+            <input type="hidden" name="no" value="<?php echo $no?>">
             <input type="submit" value="댓글 작성">
 
         </form>
