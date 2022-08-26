@@ -25,7 +25,7 @@
      <p>
      <input type="text" name="rep_name" size="15" placeholder="아이디" value="<?php echo $reply['name']?>" disabled='true'>
      </p>
-     <p><textarea name="rep_content" rows="8" cols="70" reqired><?php echo $reply['name']?></textarea></p>
+     <p><textarea name="rep_content" rows="8" cols="70" reqired><?php echo $reply['content']?></textarea></p>
      <input type="hidden" name="no" value="<?php echo $no?>">
      <input type="submit" value="댓글 수정">
 

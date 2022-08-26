@@ -1,6 +1,6 @@
 <?php error_reporting(E_ALL); 
 ini_set("display_errors",1);
-$no = $_GET['no'];
+$no = $_POST['no'];
 $password = "kyw@514514514";
 
 $servername = "localhost";
