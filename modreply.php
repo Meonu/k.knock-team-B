@@ -1,5 +1,5 @@
 <?php
-    $no=$_GET['no'];
+    $no=$_POST['no'];
 
     error_reporting(E_ALL); 
     ini_set("display_errors",1);

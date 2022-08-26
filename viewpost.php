@@ -73,23 +73,6 @@
             url = "./inputpw.php?no="+a+"&method=modreply";
             window.open(url,"chkpw","width = 400, height=200");
         }
-        function modifyreply(a)
-        {    
-        var form = document.createElement('modifyreply'); // 폼객체 생성
-        var objs;
-        objs = document.createElement('input'); // 값이 들어있는 녀석의 형식
-        objs.setAttribute('type', 'hidden'); // 값이 들어있는 녀석의 type
-        objs.setAttribute('name', 'no'); // 객체이름
-        objs.setAttribute('value', a); //객체값
-        form.appendChild(objs);
-        form.setAttribute('method', 'post'); //get,post 가능
-        form.setAttribute('action', "./deletepost.php"); //보내는 url
-        document.body.insertBefore(form,null);
-
-        window.open('','modifyrelpy',"width = 800, height=300");
-        form.submit();
-
-        }
         
     </script>
 </head>
