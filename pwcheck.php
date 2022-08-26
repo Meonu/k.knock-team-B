@@ -24,9 +24,6 @@ else
 
 
 
-$hashedPassword = $rows['password'];
-
-
 $passwordResult = password_verify($pw, $hashedPassword);
 
 if($passwordResult === false)
