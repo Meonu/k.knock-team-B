@@ -59,19 +59,10 @@ else{
     else if(strcmp($method,'modreply')==0)
     {
         ?>
-        <script>
-        var form = document.createElement('form'); // 폼객체 생성
-        var objs;
-        objs = document.createElement('input'); // 값이 들어있는 녀석의 형식
-        objs.setAttribute('type', 'hidden'); // 값이 들어있는 녀석의 type
-        objs.setAttribute('name', 'no'); // 객체이름
-        objs.setAttribute('value', <?php echo $no?>); //객체값
-        form.appendChild(objs);
-        form.setAttribute('method', 'post'); //get,post 가능
-        form.setAttribute('action', "./modreply.php"); //보내는 url
-        document.body.appendChild(form);
-        form.submit();
-        </script>
+        <form action="./modreply.php" method="post">
+            <input type="hidden" name="no" value="<?php echo $no?>">
+            <input type="submit" value="댓글 수정">
+        </form>
         <?php
     }
 }
