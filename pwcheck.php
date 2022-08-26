@@ -15,7 +15,7 @@ $result = $connect -> query($sql);
 else
 {
     $sql = "SELECT * FROM reply where no=$no";
-$result = $connect -> query($sql);
+    $result = $connect -> query($sql);
 }
 $rows = mysqli_fetch_assoc($result);
 
@@ -30,7 +30,6 @@ if($passwordResult === false)
    ?>
     <script>
         alert("비밀번호가 일치하지 않습니다.");
-        window.close();
     </script>
     <?php
     
