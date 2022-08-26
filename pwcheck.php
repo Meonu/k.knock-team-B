@@ -11,13 +11,17 @@ if(strcmp($method,'modify')==0||strcmp($method,'delete')==0)
 {
 $sql = "SELECT * FROM board where no=$no";
 $result = $connect -> query($sql);
+$rows = mysqli_fetch_assoc($result);
+$hashedPassword = $rows['password'];
 }
 else
 {
     $sql = "SELECT * FROM reply where no=$no";
     $result = $connect -> query($sql);
+    $rows = mysqli_fetch_assoc($result);
+    $hashedPassword = $rows['pw'];
 }
-$rows = mysqli_fetch_assoc($result);
+
 
 
 $hashedPassword = $rows['password'];
