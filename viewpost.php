@@ -73,6 +73,11 @@
             url = "./inputpw.php?no="+a+"&method=modreply";
             window.open(url,"chkpw","width = 550, height=250");
         }
+        function deletereply(a)
+        {
+            url = "./inputpw.php?no="+a+"&method=deletereply";
+            window.open(url,"chkpw","width = 550, height=250");
+        }
        
         
     </script>
