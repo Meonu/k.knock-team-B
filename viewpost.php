@@ -71,7 +71,7 @@
         function modreply(a)
         {
             url = "./inputpw.php?no="+a+"&method=modreply";
-            window.open(url,"chkpw","width = 1000, height=250");
+            window.open(url,"chkpw","width = 550, height=250");
         }
        
         
