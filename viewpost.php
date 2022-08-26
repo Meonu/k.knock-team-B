@@ -116,7 +116,7 @@
             <div><?php echo $reply['content']?></div>
             <div><?php echo $reply['date']?></div>
             <div><a onclick=modreply(<?php echo $reply['no']?>)>[수정]</a>
-                <a href="./deletereply.php?no=<?php echo $reply['no']?>">[삭제]</a></div>
+                <a onclick=deletereply(<?php echo $reply['no']?>)>[삭제]</a></div>
             </P>
         <?php } ?>
     </div>

@@ -29,6 +29,7 @@ if(mysqli_query($connect,$query))
    ?>
     <script>
     alert("게시글 등록이 완료되었습니다.");
+    opener.location.reload();
     window.close();
     </script>
     <?php

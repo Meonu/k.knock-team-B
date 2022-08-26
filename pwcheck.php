@@ -65,5 +65,14 @@ else{
         </form>
         <?php
     }
+    else if(strcmp($method,'deletereply')==0)
+    {
+        ?>
+        <form action="./deletereply.php" method="post">
+        <input type="hidden" name="no" value="<?php echo $no?>">
+            <input type="submit" value="댓글 삭제">
+        </form>
+        <?php
+    }
 }
 ?>
