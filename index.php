@@ -107,7 +107,7 @@ session_start();
         else{
             $orderset = $_GET['order'];
         }
-        $sql = mysqli_query($connect,"select * from board order by no $orderset limit 0,10");
+        $sql = mysqli_query($connect,"select * from board order by no $orderset");
         while($board = $sql -> fetch_array())
         {
         ?>
