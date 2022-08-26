@@ -7,9 +7,16 @@ $pw = $_POST['pw'];
 
 
 $connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
-
+if(strcmp($method,'modify')==0||strcmp($method,'delete')==0)
+{
 $sql = "SELECT * FROM board where no=$no";
 $result = $connect -> query($sql);
+}
+else
+{
+    $sql = "SELECT * FROM reply where no=$no";
+$result = $connect -> query($sql);
+}
 $rows = mysqli_fetch_assoc($result);
 
 
