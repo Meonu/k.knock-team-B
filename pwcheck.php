@@ -53,6 +53,7 @@ else{
     {
         ?>
         <script>
+            alert("dd");
             opener.modifyreply(<?php echo $no?>);
             window.close();
         </script>
