@@ -53,7 +53,7 @@ else{
     {
         ?>
         <script>
-        var form = document.createElement(''); // 폼객체 생성
+        var form = document.createElement('form'); // 폼객체 생성
         var objs;
         objs = document.createElement('input'); // 값이 들어있는 녀석의 형식
         objs.setAttribute('type', 'hidden'); // 값이 들어있는 녀석의 type
@@ -63,8 +63,6 @@ else{
         form.setAttribute('method', 'post'); //get,post 가능
         form.setAttribute('action', "./modreply.php"); //보내는 url
         document.body.appendChild(form);
-
-        window.open('','modifyrelpy',"width = 800, height=300");
         form.submit();
         </script>
         <?php
