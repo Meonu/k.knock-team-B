@@ -68,6 +68,11 @@
         document.body.appendChild(form);
         form.submit();
         }
+        function modreply(a)
+        {
+            url = "./inputpw.php?no="+a+"&method=modreply";
+            window.open(url,"chkpw","width = 400, height=200");
+        }
         
     </script>
 </head>
@@ -109,7 +114,7 @@
             <div><?php echo $reply['name']; ?></div>
             <div><?php echo $reply['content']?></div>
             <div><?php echo $reply['date']?></div>
-            <div><a href="./modreply.php?no=<?php echo $reply['no']?>">[수정]</a>
+            <div><a onclick=modreply(<?php echo $reply['no']?>)>[수정]</a>
                 <a href="./deletereply.php?no=<?php echo $reply['no']?>">[삭제]</a></div>
             </P>
         <?php } ?>
