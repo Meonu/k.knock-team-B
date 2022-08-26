@@ -49,5 +49,14 @@ else{
         </script>
         <?php
     }
+    else if(strcmp($method,'modreply')==0)
+    {
+        ?>
+        <script>
+            opener.modifyreply(<?php echo $no?>);
+            window.close();
+        </script>
+        <?php
+    }
 }
 ?>
