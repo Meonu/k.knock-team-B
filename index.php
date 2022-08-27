@@ -71,7 +71,7 @@ session_start();
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
         <div>
-        <input type="button" value="글쓰기" onclick ="write();">
+        <button onclick ="write();">글쓰기</button>
         </div>
         <form action="./index.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
