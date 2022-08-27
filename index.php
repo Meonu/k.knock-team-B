@@ -17,13 +17,13 @@ session_start();
         function write()
         {
             <?php 
-            if(!isset($_SESSION['userid'])) 
+            if(isset($_SESSION['userid'])) 
             {
-            ?> alert("회원만 글작성이 가능합니다.");<?php
+            ?> location.href="./postwrite.php";<?php
             }
             else{
-            ?>
-            location.href="./postwrite.php";
+            ?>alert("회원만 글작성이 가능합니다.");
+            
             <?php } ?>
         }
         function changevalue()
