@@ -29,8 +29,7 @@ session_start();
         function changevalue()
         {
             document.orderchange.submit();
-        }
-        Function 
+        } 
     </script>
 </head>
 <body>
