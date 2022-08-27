@@ -1,3 +1,13 @@
+<?php 
+session_start();
+            if(!isset($_SESSION['userid'])) 
+            {
+            ?> <script>
+                alert("회원만 글작성이 가능합니다.");
+                </script>
+                <?php
+            }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

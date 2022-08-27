@@ -16,12 +16,21 @@ session_start();
         }
         function write()
         {
-            location.href="./postwrite.php"
+            <?php 
+            if(!isset($_SESSION['userid'])) 
+            {
+            ?> alert("회원만 글작성이 가능합니다.");<?php
+            }
+            else{
+            ?>
+            location.href="./postwrite.php";
+            <?php } ?>
         }
         function changevalue()
         {
             document.orderchange.submit();
         }
+        Function 
     </script>
 </head>
 <body>
@@ -63,7 +72,7 @@ session_start();
         <h1>자유게시판</h1>
         <h4>글을 작성하고 공유하는 게시판입니다.</h4>
         <div>
-        <input type="button" value="글쓰기" onclick = "location.href='./postwrite.php'">
+        <input type="button" value="글쓰기" onclick = write()>
         </div>
         <form action="./index.php" method="get" name="orderchange">
         <select name="order" id=order onchange="changevalue()">
