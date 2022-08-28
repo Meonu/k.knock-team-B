@@ -88,6 +88,9 @@
             <td><?php echo $rows['title'] ?></td>
         </tr>
         <tr>
+            <td>파일 <a href="../../upload/<?php echo $rows['filename'];?>" download><?php echo $rows['filename']?></a></td>
+        </tr>
+        <tr>
             <td>작성자 <?php echo $rows['name'] ?></td>
         </tr>
         <tr>

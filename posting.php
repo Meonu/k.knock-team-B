@@ -23,7 +23,13 @@ $pw=$_POST["pw"];
 $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
 $date = date('Y-m-d');
 
-$query = "insert into board (name, password, title, content, date)  values ('$name', '$hashedPassword', '$title', '$content', '$date')";
+$tmpfile =  $_FILES['b_file']['tmp_name'];
+$o_name = $_FILES['b_file']['name'];
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
+$folder = "../../upload/".$filename;
+move_uploaded_file($tmpfile,$folder);
+
+$query = "insert into board (name, password, title, content, date, filename)  values ('$name', '$hashedPassword', '$title', '$content', '$date', '$o_name')";
 
 if(mysqli_query($connect,$query))
 {
