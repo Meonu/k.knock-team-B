@@ -14,18 +14,17 @@ session_start();
             session_unset();
             session_destroy();
         }
-        
+
         function write()
         {
             <?php 
             if(isset($_SESSION['userid'])) 
             {
-            ?> 
-            location.href="./postwrite.php";<?php
+            echo "<script>location.href='./postwrite.php';</script>";
             }
             else{
-            ?>alert("회원만 글 작성이 가능합니다.");
-            <?php } ?>
+            echo "<script>alert('회원만 이용이 가능합니다.');</script>";
+            } ?>
         }
 
         function changevalue()
