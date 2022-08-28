@@ -24,7 +24,8 @@ session_start();
             }
             else{
             echo "<script>alert('회원만 이용이 가능합니다.');</script>";
-            } ?>
+            } 
+            ?>
         }
 
         function changevalue()
