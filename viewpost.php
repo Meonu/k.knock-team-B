@@ -15,7 +15,7 @@
 
     $connect = new mysqli($servername, $user, $password, $DBname);
 
-        $query = "SELECT title, content, date, view, name, thumb, filename from board where no = $no";
+        $query = "SELECT * from board where no = $no";
         $result = $connect -> query($query);
         $rows = mysqli_fetch_assoc($result);
 ?>
