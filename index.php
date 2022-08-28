@@ -20,10 +20,10 @@ session_start();
             <?php 
             if(isset($_SESSION['userid'])) 
             {
-            echo "<script>location.href='./postwrite.php';</script>";
+            echo "location.href='./postwrite.php';";
             }
             else{
-            echo "<script>alert('회원만 이용이 가능합니다.');</script>";
+            echo "alert('회원만 이용이 가능합니다.');";
             } 
             ?>
         }
