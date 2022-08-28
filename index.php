@@ -14,19 +14,20 @@ session_start();
             session_unset();
             session_destroy();
         }
+        
         function write()
         {
             <?php 
             if(isset($_SESSION['userid'])) 
             {
             ?> 
-            alert("회원이 맞다.")
             location.href="./postwrite.php";<?php
             }
             else{
             ?>alert("회원만 글 작성이 가능합니다.");
             <?php } ?>
         }
+
         function changevalue()
         {
             document.orderchange.submit();
