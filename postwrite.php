@@ -32,7 +32,7 @@ session_start();
     <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20 required></textarea></td>
     </tr>
     <tr>
-       <td> <input type="file" name="add file"></td>
+       <td> <input type="file" name="addfile"></td>
     </tr>
     <tr>
     <td>비밀번호</td><td><input type="password" name="pw" placeholder="password" size=10 maxlength="10" required></td>
