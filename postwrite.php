@@ -4,6 +4,7 @@ session_start();
             {
             ?> <script>
                 alert("회원만 글작성이 가능합니다.");
+                location.href='./index.php';
                 </script>
                 <?php
             }
