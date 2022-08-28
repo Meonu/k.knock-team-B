@@ -19,7 +19,7 @@ session_start();
 <body>
     <h1>글쓰기</h1>
     <h4>자유로운 주제로 글을 작성해 보세요.</h4>
-    <form action="./posting.php" method="post" id="posting">
+    <form action="./posting.php" method="post" id="posting" enctype="multipart/form-data">
     <table>
     <tr>
     <td>제목</td><td><input type = "text" name="title" id="title" placeholder="제목을 입력하세요." required></td>
@@ -29,6 +29,9 @@ session_start();
     </tr>
     <tr>
     <td>내용</td><td><textarea name="content" id="content" cols=85 rows=20 required></textarea></td>
+    </tr>
+    <tr>
+        <input type="file" name="add file">
     </tr>
     <tr>
     <td>비밀번호</td><td><input type="password" name="pw" placeholder="password" size=10 maxlength="10" required></td>
