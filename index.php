@@ -19,11 +19,12 @@ session_start();
             <?php 
             if(isset($_SESSION['userid'])) 
             {
-            ?> location.href="./postwrite.php";<?php
+            ?> 
+            alert("회원이 맞다.")
+            location.href="./postwrite.php";<?php
             }
             else{
-            ?>alert("회원만 글작성이 가능합니다.");
-            return false;
+            ?>alert("회원만 글 작성이 가능합니다.");
             <?php } ?>
         }
         function changevalue()
