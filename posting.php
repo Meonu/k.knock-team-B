@@ -26,7 +26,7 @@ $date = date('Y-m-d');
 $tmpfile =  $_FILES['addfile']['tmp_name'];
 $o_name = $_FILES['addfile']['name'];
 $folder = "upload/".$o_name;
-move_uploaded_file($tmpfile, "upload/".$o_name);
+move_uploaded_file($tmpfile, "./uploads/".$o_name);
 
 $query = "insert into board (name, password, title, content, date, filename)  values ('$name', '$hashedPassword', '$title', '$content', '$date', '$o_name')";
 
