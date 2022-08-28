@@ -25,7 +25,7 @@ $date = date('Y-m-d');
 
 $tmpfile =  $_FILES['addfile']['tmp_name'];
 $o_name = $_FILES['addfile']['name'];
-$filename = iconv("UTF-8", "EUC-KR",$_FILES['b_file']['name']);
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['addfile']['name']);
 $folder = "../../upload/".$filename;
 move_uploaded_file($tmpfile,$folder);
 
