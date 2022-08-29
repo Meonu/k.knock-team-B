@@ -21,7 +21,7 @@
         ?>
         <script>
 
-            window.location.assign("/upload/<?php echo $rows['filename'];?>");
+            window.location.assign("/uploads/<?php echo $rows['filename'];?>");
         //var a = document.createElement('A');
         //a.href = file_path;
         //a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
