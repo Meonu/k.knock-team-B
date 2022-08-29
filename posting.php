@@ -23,6 +23,16 @@ $pw=$_POST["pw"];
 $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
 $date = date('Y-m-d');
 
+if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)==false||ctype_alnum($pw)==false)
+        {
+        ?>
+        <script>
+        alert("이상한짓 하지 맙시다 거참");
+        location.href="postwrite";
+        </script>
+        <?php
+        }
+
 $tmpfile =  $_FILES['addfile']['tmp_name'];
 $o_name = $_FILES['addfile']['name'];
 $folder = "upload/".$o_name;

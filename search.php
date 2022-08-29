@@ -103,6 +103,17 @@ session_start();
     
         $category=$_GET['category'];
         $search=$_GET['search'];
+
+        if(ctype_alnum($search)==false)
+        {
+        ?>
+        <script>
+        alert("이상한짓 하지 맙시다 거참");
+        location.href="index.php";
+        </script>
+        <?php
+        }
+
         $orderset = null;
         if(isset($_GET['order'])==false)
         {$orderset="desc";}
