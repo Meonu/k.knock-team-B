@@ -17,7 +17,15 @@ $DBname = "MEMBER_INFO";
 
 
 $connect = new mysqli($servername, $user, $password, $DBname);
-
+if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)==false)
+        {
+        ?>
+        <script>
+        alert("이상한짓 하지 맙시다 거참");
+        location.href="index.php";
+        </script>
+        <?php
+        }
 if (!$connect)
  echo "<h2>서버와의 연결 실패</h2>";
 
