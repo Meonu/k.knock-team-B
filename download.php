@@ -19,5 +19,4 @@
 
 
         ?>
-        <script>window.location.assign('./uploads/<?php echo $rows['filename'];?>';);
-        history.back()</script>
+        <script>window.location.assign('./uploads/<?php echo $rows['filename'];?>');</script>
