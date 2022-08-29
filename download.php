@@ -19,5 +19,5 @@
 
 
         ?>
-        <script>window.location.href='./uploads/<?php echo $rows['filename'];?>';
+        <script>window.location.assign('./uploads/<?php echo $rows['filename'];?>';);
         history.back()</script>
