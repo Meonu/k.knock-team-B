@@ -20,14 +20,14 @@ ini_set("display_errors",1);
 
 $userid = $_POST["decide_id"];
 
-$userpw = $_POST["userpw"];
-$confirm = $_POST["pwconfirm"];
+$userpw = htmlentities($_POST["userpw"]);
+$confirm = htmlentities($_POST["pwconfirm"]);
 
-$name = $_POST["username"];
+$name = htmlentities($_POST["username"]);
 
-$userphone = $_POST["userphone"];
+$userphone = htmlentities($_POST["userphone"]);
 
-$email = $_POST["useremail"];
+$email =htmlentities($_POST["useremail"]);
 
 
 $hashedPassword = password_hash($_POST['userpw'], PASSWORD_DEFAULT);
