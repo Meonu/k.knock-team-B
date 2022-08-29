@@ -20,12 +20,13 @@
 
         ?>
         <script>
-        var file_path = "http://52.231.107.199:6365/uploads/<?php echo $rows['filename'];?>";
-        var a = document.createElement('A');
-        a.href = file_path;
-        a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+
+            window.location.assign("/upload/<?php echo $rows['filename'];?>");
+        //var a = document.createElement('A');
+        //a.href = file_path;
+        //a.download = file_path.substr(file_path.lastIndexOf('/') + 1);
+        //document.body.appendChild(a);
+        //a.click();
+        //document.body.removeChild(a);
         </script>
 
