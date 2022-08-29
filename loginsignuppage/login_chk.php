@@ -3,8 +3,8 @@
 $connect = new mysqli("localhost","yeonugim","kyw@514514514","MEMBER_INFO");
 
 
-$userid = $_POST["userid"];
-$userpw = $_POST["userpw"];
+$userid = htmlentities($_POST["userid"]);
+$userpw = htmlentities($_POST["userpw"]);
 
 $idsql = "SELECT * FROM mem_info where userid='$userid'";
 $idresult = mysqli_query($connect, $idsql); //id 검증
