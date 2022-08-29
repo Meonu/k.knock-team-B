@@ -28,7 +28,7 @@ if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)=
         ?>
         <script>
         alert("이상한짓 하지 맙시다 거참");
-        location.href="postwrite";
+        location.href="postwrite.php";
         </script>
         <?php
         }
