@@ -3,8 +3,8 @@ $no = $_POST['no'];
 $content = htmlentities($_POST['rep_content']);
 
 
-error_reporting(E_ALL); 
-ini_set("display_errors",1);
+//error_reporting(E_ALL); 
+//ini_set("display_errors",1);
 
 $password = "kyw@514514514";
 

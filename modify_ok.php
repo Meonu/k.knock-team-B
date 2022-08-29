@@ -4,8 +4,8 @@ $title = htmlentities($_POST['title']);
 $content = htmlentities($_POST['content']);
 
 
-error_reporting(E_ALL); 
-ini_set("display_errors",1);
+//error_reporting(E_ALL); 
+//ini_set("display_errors",1);
 
 $password = "kyw@514514514";
 

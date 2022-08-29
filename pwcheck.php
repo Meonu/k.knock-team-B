@@ -1,6 +1,6 @@
 <?php
-error_reporting(E_ALL); 
-ini_set("display_errors",1);
+//error_reporting(E_ALL); 
+//ini_set("display_errors",1);
 $no = $_GET['no'];
 $method = $_GET['method'];
 $pw = $_POST['pw'];
