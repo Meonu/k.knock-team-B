@@ -1,6 +1,6 @@
 <?php
 $no = $_POST['no'];
-$content = $_POST['rep_content'];
+$content = htmlentities($_POST['rep_content']);
 
 
 error_reporting(E_ALL); 
