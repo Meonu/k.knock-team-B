@@ -27,9 +27,30 @@ $date = date('Y-m-d');
 $tmpfile =  htmlentities($_FILES['addfile']['tmp_name']);
 $o_name = $_FILES['addfile']['name'];
 $folder = "upload/".$o_name;
-move_uploaded_file($tmpfile, "./uploads/".$o_name);
 
-$query = "insert into board (name, password, title, content, date, filename)  values ('$name', '$hashedPassword', '$title', '$content', '$date', '$o_name')";
+$filename = iconv("UTF-8", "EUC-KR",$_FILES['addfile']['name']);
+
+$ext = explode(".", strtolower($filename));
+
+ $cnt = count($ext)-1;
+ if($ext[$cnt] === ""){
+   if(preg_match("/php|php3|php4|htm|inc|html/", $ext[$cnt-1])){
+           echo "업로드할 수 없는 파일 유형입니다.";
+       exit();
+   }
+ } else if(preg_match("/php|php3|php4|htm|inc|html/", $ext[$cnt])){
+         echo "업로드할 수 없는 파일 유형입니다.";
+            exit();
+         
+
+         
+
+ } 
+ else {
+$upload = move_uploaded_file($tmpfile, "./uploads/$o_name");
+ }
+
+$query = "insert into board (name, password, title, content, date, filename)  values ('a', '$hashedPassword', '$title', '$content', '$date', '$o_name')";
 
 if(mysqli_query($connect,$query))
 {
