@@ -23,7 +23,7 @@ $pw=$_POST["pw"];
 $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
 $date = date('Y-m-d');
 
-if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)==false||ctype_alnum($pw)==false)
+if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)==false)
         {
         ?>
         <script>
