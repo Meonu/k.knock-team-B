@@ -89,8 +89,8 @@ session_start();
             </thead>
         </table>
         <?php
-        error_reporting(E_ALL); 
-        ini_set("display_errors",1);
+        //error_reporting(E_ALL); 
+        //ini_set("display_errors",1);
     
         $password = "kyw@514514514";
         
@@ -101,24 +101,14 @@ session_start();
         $DBname = "MEMBER_INFO";
      
     
-        $category=$_GET['category'];
-        $search=$_GET['search'];
-
-        if(ctype_alnum($search)==false)
-        {
-        ?>
-        <script>
-        alert("이상한짓 하지 맙시다 거참");
-        location.href="index.php";
-        </script>
-        <?php
-        }
+        $category=htmlentities($_GET['category']);
+        $search=htmlentities($_GET['search']);
 
         $orderset = null;
         if(isset($_GET['order'])==false)
         {$orderset="desc";}
         else{
-            $orderset = $_GET['order'];
+            $orderset = htmlentities($_GET['order']);
         }
 
         $connect = new mysqli($servername, $user, $password, $DBname);

@@ -16,24 +16,15 @@ $connect = new mysqli($servername, $user, $password, $DBname);
 if (!$connect)
  echo "<h2>서버와의 연결 실패</h2>";
 
-$name=$_POST["name"];
-$title=$_POST["title"];
-$content=$_POST["content"];
+$name=htmlentities($_POST["name"]);
+$title=htmlentities($_POST["title"]);
+$content=htmlentities($_POST["content"]);
 $pw=$_POST["pw"];
 $hashedPassword = password_hash($pw, PASSWORD_DEFAULT);
 $date = date('Y-m-d');
 
-if(ctype_alnum($name)==false||ctype_alnum($title)==false||ctype_alnum($content)==false)
-        {
-        ?>
-        <script>
-        alert("이상한짓 하지 맙시다 거참");
-        location.href="postwrite.php";
-        </script>
-        <?php
-        }
 
-$tmpfile =  $_FILES['addfile']['tmp_name'];
+$tmpfile =  htmlentities($_FILES['addfile']['tmp_name']);
 $o_name = $_FILES['addfile']['name'];
 $folder = "upload/".$o_name;
 move_uploaded_file($tmpfile, "./uploads/".$o_name);
