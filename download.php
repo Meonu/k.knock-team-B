@@ -19,4 +19,4 @@
 
 
         ?>
-        <script>window.location.assign('./uploads/<?php echo $rows['filename'];?>');</script>
+        <script>window.location.href('./uploads/<?php echo $rows['filename'];?>');</script>
